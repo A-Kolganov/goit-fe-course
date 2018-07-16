@@ -56,12 +56,13 @@ div>p {
 .task_2 {
     margin-bottom: 10px;
     font-family: Arial, Helvetica, sans-serif;
-}
-.task_2 {
     margin-bottom: 420px;
 }
+.task_3_header {
+	clear: both;
+}
 .join {
-    background-image: url(/module_01-02_extra_hw/img/background.jpg);
+    background-image: url(../img/background.jpg);
     border: 1px dashed;
     border-radius: 5px;
     width: 70%;
