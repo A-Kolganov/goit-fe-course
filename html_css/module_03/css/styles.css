@@ -1,0 +1,80 @@
+* {
+    margin:0;
+    padding:0;
+}
+@import url('https://fonts.googleapis.com/css?family=Ubuntu');
+@import url('http://fonts.googleapis.com/css?family=playfair+display');
+body{
+    font-family: 'Playfair Display', serif;
+    width: 900px;
+    font-size: 14px;
+    color: #626262;
+    margin: auto;
+}
+header{
+    width: 900px;
+    height: 192px;
+    font-size: 14px;
+}
+.navigation{
+    padding-top: 77px;
+    padding-left: 165px;
+    margin: auto;   
+}
+.navigation li{
+    display: inline;
+    margin-right: 100px; 
+    text-transform: uppercase;
+}
+.section_top,.section_middle {
+    clear: both;
+    height: 480px;
+    margin-bottom: 135px;
+}
+.section_bottom {
+    clear: both;
+    height: 480px;
+}
+h2 {
+    font-size: 30px;
+    margin-bottom: 40px;
+}
+h3 {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    font-family: 'Ubuntu', sans-serif;
+    color: #b4ad9e;
+    font-size: 14px;
+    text-transform: uppercase;
+}
+.block_left {
+    float: left;   
+}
+.block_right{
+    float: right;    
+}
+.block_left,.block_right {
+    width: 420px;
+}
+img {
+    width: 420px;
+    height: 280px;
+}
+.text_info {
+    height: 200px;
+}
+form {
+    border; 1px;
+    border-color: #626262;  
+}
+footer{
+   text-align: center;
+   margin-top: 60px;
+}
+button {
+    width: 165px;
+    height: 60px;
+    font-size: 20px;
+    background-color: white;
+    
+}
