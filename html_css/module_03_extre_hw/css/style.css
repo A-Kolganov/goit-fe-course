@@ -1,0 +1,26 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+@import url('http://fonts.googleapis.com/css?family=playfair+display');
+
+body {
+
+}
+header {
+    
+    background-color: #ffa;
+    height: 80px;
+    
+}
+h1 {
+    
+    color: red;
+    font-size: 50px;
+    font-weight: bolder;
+    text-align: center;
+    
+}
+.header_1 {
+    
+}
