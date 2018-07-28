@@ -6,9 +6,11 @@
 @import url('http://fonts.googleapis.com/css?family=playfair+display');
 body{
     font-family: 'Playfair Display', serif;
-    width: 900px;
     font-size: 14px;
     color: #626262;
+}
+.box {
+    width: 900px;
     margin: auto;
 }
 header{
@@ -20,6 +22,13 @@ header{
     padding-top: 77px;
     padding-left: 165px;
     margin: auto;   
+}
+a:link {
+    text-decoration: none;
+    color: #626262; 
+}
+a:hover {
+    color: #22ff;
 }
 .navigation li{
     display: inline;
@@ -75,6 +84,6 @@ button {
     width: 165px;
     height: 60px;
     font-size: 20px;
-    background-color: white;
-    
+    background-color: #ffffff;
+    margin-bottom: 70px;
 }
