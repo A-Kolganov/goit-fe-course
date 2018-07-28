@@ -86,4 +86,6 @@ button {
     font-size: 20px;
     background-color: #ffffff;
     margin-bottom: 70px;
+    cursor: pointer
 }
+
