@@ -5,7 +5,7 @@
 @import url('http://fonts.googleapis.com/css?family=playfair+display');
 
 body {
-
+    font-family: playfair display;
 }
 header {
     position:relative;
@@ -36,9 +36,62 @@ h2 {
     border-bottom-color: yellow;
     
 }
-.task_1 {
+.task_1,.task_2{
     background-image: url(../img/background-1024x1024.jpg);
     padding-top: 30px;
+    padding-bottom:50px;
     border: 2px solid;
     border-top-color: red;
+}
+li {
+    display: inline;
+    font-size: 20px;
+    margin-left: 50px;
+    text-transform: uppercase;
+    background-color: rgb(251, 255, 0);
+    border-radius: 10px;
+    color: #0f00f0;
+    box-sizing: border-box;
+    padding: 10px;
+}
+ul {
+    margin-top: 20px;
+    padding: 20px;
+    text-align: center;
+}
+a:link {
+    opacity: 0.8;
+    text-decoration: none;
+}
+a:hover {
+    box-sizing: border-box;
+    padding: 10px;
+    color: #ff0000;
+    font-size: 25px;
+    font-weight: bolder;
+}
+.news {
+    margin-top: 50px;
+    width: 470px;
+    box-sizing: border-box;
+    margin: auto;
+    background-color: rgba(255, 255, 255, 0.95);
+}
+img {
+    padding: 25px;
+}
+span {
+    text-transform: uppercase;
+    color: #b4ad9e;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    font-size: 14px;
+}
+h3 {
+    font-size: 30px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.text {
+    padding: 0px 25px 25px 25px;
 }
