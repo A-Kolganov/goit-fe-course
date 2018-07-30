@@ -6,6 +6,7 @@
 
 body {
     font-family: playfair display;
+    background-image: url(../img/background-1024x1024.jpg);
 }
 header {
     position:relative;
@@ -22,22 +23,20 @@ h1 {
     font-weight: bolder;   
 }
 h2 {
-    
     width: 200px;
     font-size: 35px;
     background-color: white;
     border-radius: 15px;
     text-align: center;
     margin: auto;
+    margin-bottom: 20px;
     border: 3px solid;
     border-top-color: blueviolet;
     border-right-color: red;
     border-left-color: greenyellow;
     border-bottom-color: yellow;
-    
 }
-.task_1,.task_2{
-    background-image: url(../img/background-1024x1024.jpg);
+.task_1,.task_2,.task_4{
     padding-top: 30px;
     padding-bottom:50px;
     border: 2px solid;
@@ -71,9 +70,7 @@ a:hover {
     font-weight: bolder;
 }
 .news {
-    margin-top: 50px;
     width: 470px;
-    box-sizing: border-box;
     margin: auto;
     background-color: rgba(255, 255, 255, 0.95);
 }
@@ -92,6 +89,56 @@ h3 {
     margin-top: 20px;
     margin-bottom: 20px;
 }
-.text {
+#text {
     padding: 0px 25px 25px 25px;
+}
+.task_3 {
+    width: 960px;
+    margin: auto;
+    padding-top: 20px;
+}
+.block_left {
+    float: left;   
+}
+.block_right{
+    float: right;    
+}
+.block_left,.block_right {
+    width: 470px;
+}
+.news_box {
+    outline: 1px solid #000;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    display: inline-block;
+    background-color: #fff;
+}
+.text_info {
+    margin-left: 25px;
+    margin-right: 25px;
+    width: 420px;
+    height: 200px;
+}
+h5 {
+    font-size: 30px;
+    margin: auto;
+    width: 300px;
+    padding: 20px;
+    border-radius: 5px;
+    background: linear-gradient(to right, #0f00f0, #ffff00);
+}
+table {
+    font-size: 20px;
+    text-align: center;
+    width: 500px;
+    margin: auto;
+    border-radius: 5px;
+}
+section.task_4>div.calculator {
+    margin: auto;
+    margin-top:20px;
+}
+tr,td,table {
+    border: 1px dashed #000;
+    background-color: #ffa;
 }
