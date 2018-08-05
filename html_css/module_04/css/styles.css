@@ -110,6 +110,11 @@ section.shop {
     content: " ";
     display: block;
 }
+.bottom_cards::after {
+    clear: both;
+    content: " ";
+    display: block;
+}
 .product_card:last-child {
     float: right;
     box-sizing: border-box;
