@@ -1,0 +1,43 @@
+@font-face {
+    font-family: opensans ;
+    src: url(../fonts/OpenSans.ttf);
+}
+@font-face {
+    font-family: opensans semibold;
+    src: url(../fonts/OpenSans-Semibold.ttf);
+}
+@font-face {
+    font-family: opensans bold;
+    src: url(../fonts/OpenSans-Bold.ttf)
+}
+@font-face {
+    font-family: roboto light;
+    src: url(../fonts/Roboto-Light.ttf)
+}
+@font-face {
+    font-family: roboto_black;
+    src: url(../fonts/Roboto-Black.ttf)
+}
+body {
+    margin: 0;
+    padding: 0;
+}
+section.content {
+    width: 1170px;
+    margin: auto;
+}
+header {
+    height: 60px;
+}
+div.logo {
+    margin-left: 30px;
+    float: left;
+    text-transform: uppercase;
+    font-family: roboto light;
+    font-size: 30px;
+    color: #555252;
+}
+div.logo>p>span {
+    font-family: roboto_black;
+    color: #1abc9c;
+}
