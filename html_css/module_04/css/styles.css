@@ -29,6 +29,7 @@ body {
 section.content {
     width: 1170px;
     margin: auto;
+    padding-bottom: 80px;
 }
 header {
     height: 60px;
