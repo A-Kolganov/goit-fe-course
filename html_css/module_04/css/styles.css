@@ -86,7 +86,7 @@ h1::after {
     margin-left: auto;
     margin-right: auto;
 }
-section.shop {
+section.shop,section.blog {
     margin-top: 90px;
     width: 1170px;    
 }
@@ -154,4 +154,41 @@ img {
 }
 p {
     margin-top: 10px;
+}
+.news {
+    width: 1110px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.news_left,.news_center {
+    float: left;
+    width: 350px;
+    height: 495px;
+    margin-right: 30px;
+}
+.news_right {
+    float: right;
+    width: 350px;
+    height: 495px;
+}
+h2 {
+    font-family: opensans semibold;
+    font-size: 18px;
+    margin-top: 10px;
+}
+h2::after {
+    content: " ";
+    display: block;
+    width: 136px;
+    height: 2px;
+    background-color: #1abc9c;
+    margin-top: 18px; 
+    
+}
+article {
+    height: 65px;
+    width: 350px;
+    font-family: opensans;
+    font-size: 14px;
+    margin-top: 30px;
 }
