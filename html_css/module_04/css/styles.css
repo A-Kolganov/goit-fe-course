@@ -123,3 +123,35 @@ section.shop {
 .product_card:hover {
     background-color: #1abc9c;
 }
+img {
+    top: 100%;
+}
+.info {
+    height: 40px;
+    bottom: 100%;
+    box-sizing: border-box;
+    
+}
+.name,.price {
+    margin-top: -4px;
+    color:  #ffffff;
+    font-family: roboto_black;
+    font-size: 18px;
+    padding-bottom: 10px;
+    text-transform: uppercase;
+}
+.name {
+    float: left;
+    text-align: left;
+    padding-left: 10px;
+}
+.price {
+    float: right;
+    text-align: center;
+    width: 50px;
+    height: 40px;
+    background-color: rgba(255, 255, 255, 0.5);
+}
+p {
+    margin-top: 10px;
+}
