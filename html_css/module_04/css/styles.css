@@ -7,6 +7,10 @@
     src: url(../fonts/OpenSans-Semibold.ttf);
 }
 @font-face {
+    font-family: opensans light;
+    src: url(../fonts/OpenSans-Light.ttf);
+}
+@font-face {
     font-family: opensans bold;
     src: url(../fonts/OpenSans-Bold.ttf)
 }
@@ -62,7 +66,7 @@ ul {
     font-family: opensans bold;
     font-size: 14px;
 }
-a:hover {
+li a:hover {
     color: #1abc9c;
 }
 h1 {
@@ -159,6 +163,11 @@ p {
     width: 1110px;
     margin-left: auto;
     margin-right: auto;
+    margin-bottom: 80px;
+}
+.news::after {
+    content: " ";
+    clear: both;
 }
 .news_left,.news_center {
     float: left;
@@ -175,6 +184,7 @@ h2 {
     font-family: opensans semibold;
     font-size: 18px;
     margin-top: 10px;
+    color: #555252;
 }
 h2::after {
     content: " ";
@@ -191,4 +201,16 @@ article {
     font-family: opensans;
     font-size: 14px;
     margin-top: 30px;
+    color: #555252;
+}
+.blog .news a {
+    background-color: #4ec6ab;
+    text-transform: capitalize;
+    font-family: opensans light;
+    font-size: 16px;
+    color: #ffffff;
+    padding: 15px 43px;
+    border-radius: 2px;
+    margin-top: 20px;
+    display: inline-block;
 }
