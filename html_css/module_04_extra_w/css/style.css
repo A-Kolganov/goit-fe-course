@@ -1,0 +1,33 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+div.content {
+    width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+body {
+    background: linear-gradient(to right, #ffffff, #5555ff, #ffffff);
+}
+h1 {
+    text-decoration: underline;
+    font-size: 40px;
+    text-align: center;
+    text-transform: capitalize;
+    margin: 0;
+    color: #ffffff;
+}
+h2 {
+    text-transform: uppercase;
+    font-size: 25px;
+    color: #5555ff;
+    background-color: #5f5f5f;
+    border-radius: 10px;
+    padding: 10px;
+    display: inline-block;
+    margin-top: 15px;
+}
+.name {
+    text-align: center;
+}
