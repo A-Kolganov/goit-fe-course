@@ -31,3 +31,58 @@ h2 {
 .name {
     text-align: center;
 }
+.task_1 a {
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 18px;
+    text-transform: uppercase;
+    background-color: #5555ff;
+    border: #ffffff solid 3px;
+    border-radius: 5px;
+    padding: 10px;
+}
+.task_1 li {
+    list-style: none;
+    float: left;
+    box-sizing: border-box;
+    margin-right: 92px;
+}
+.task_1 li:last-child {
+    margin-right: 0px;
+}
+.task_1 ul {
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+.task_1 ul::after {
+    content: " ";
+    clear: both;
+    display: table;
+}
+.task_1 a:hover {
+    color: #5555ff;
+    background-color: #ffffff;
+    border: #5555ff solid 3px;
+    cursor: pointer;
+}
+.task_2 li {
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+    text-align: center;
+    margin-right: 5px;
+    vertical-align: middle;
+}
+.task_2 ul {
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+.task_2 li:nth-child(3n+1) {
+    background-color: #88292f;
+}
+.task_2 li:nth-child(3n+2) {
+    background-color: #5db7de;
+}
+.task_2 li:nth-child(3n+3) {
+    background-color: #0d5d56;
+}
