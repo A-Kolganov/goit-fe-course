@@ -104,3 +104,46 @@ h2 {
 .task_3 li a:hover {
     color: #db2935;
 }
+.task_4 ul {
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+.task_4 li {
+    display: inline-block;
+    margin-right: 30px;
+}
+.task_4 li:first-child {
+    margin-left: 30px;
+}
+.task_4 li:first-child::before {
+    content: "\2160";
+    margin-right: 10px;
+}
+.task_4 li:nth-child(2)::before {
+    content: "\2161";
+    margin-right: 10px;
+}
+.task_4 li:nth-child(3)::before {
+    content: "\2162";
+    margin-right: 10px;
+}
+.task_4 li:nth-child(4)::before {
+    content: "\2163";
+    margin-right: 10px;
+}
+.task_4 li:last-child::before {
+    content: "\2164";
+    margin-right: 10px;
+}  
+.task_4 li:nth-child(2n+1)::before {
+    background-color: #db2935;
+    padding: 20px;
+    border-radius: 30px;
+    border: #ffffff solid 1px;
+}    
+.task_4 li:nth-child(2n+2)::before {
+    background-color: #5db7de;
+    padding: 20px;
+    border-radius: 30px;
+    border: #ffffff solid 1px;
+}
