@@ -14,6 +14,10 @@
     font-family: "pe icon 7";
     src: url(../fonts/Pe-icon-7-stroke.ttf)
 }
+@font-face {
+    font-family: "opensans";
+    src: url(../fonts/OpenSans.ttf);
+}
 body {
     margin: 0;
     padding: 0;
@@ -76,19 +80,219 @@ a:hover {
     background-image: url(../img/mainfoto_1600x600.png);
     margin-left: -215px;
 }
+h1 {
+    text-transform: uppercase;
+    font-family: "roboto black";
+    font-size: 60px;
+    color: #ffffff;
+    padding-top: 210px;
+    padding-left: 430px;
+    margin: 0;
+
+}
+h2 {
+    text-transform: uppercase;
+    font-family: "roboto black";
+    color: #ffffff;
+    font-size: 24px;
+    padding-top: 18px;
+    padding-left: 430px;
+    margin: 0;
+}
 .left_arrow {
     position: absolute;
-    left: 245px;
-    top: 225px;
-    height: 104px;
-    width: 104px;
-    background-color: #1abc9c;
-    opacity: 0.6;
-    text-align: center;
-    
-}
-span {
-    color: #ffffff;
+    height: 105px;
+    width: 105px;
+    background: #1abc9c;
+    opacity: 0.8;
     font-size: 100px;
+    color: #ffffff;
+    text-align: center;
+    line-height: 70%;
+    margin-left: 245px;
+    margin-top: 225px;
+}
+.right_arrow,.left_arrow>span {
     font-family: "pe icon 7";
+}
+.right_arrow {
+    position: absolute;
+    height: 105px;
+    width: 105px;
+    background: #1abc9c;
+    opacity: 0.8;
+    font-size: 100px;
+    color: #ffffff;
+    text-align: center;
+    line-height: 70%;
+    margin-left: 1253px;
+    margin-top: 225px;
+}
+.right_arrow:hover {
+    opacity: 1;
+    cursor: pointer;
+}
+.left_arrow:hover {
+    opacity: 1;
+    cursor: pointer;
+}
+section.items {
+    width: 1600px;
+    background-color: #e9f0fd;
+    height: 680px;
+    margin-left: -215px;
+}
+h3 {
+    font-family: "roboto black";
+    font-size: 48px;
+    text-transform: uppercase;
+    padding-top: 100px;
+    text-align: center;
+    color: #515151;
+    margin: 0;
+}
+h3::after {
+    content: " ";
+    display: block;
+    height: 7px;
+    width: 165px;
+    background-color: #1abc9c;
+    margin-top: 40px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.items>div.cards {
+    width: 1170px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 80px;
+    height: 322px;
+}
+.cards::after {
+    content: "";
+    clear: both;
+}
+.card {
+    height: 322px;
+    width: 255px;
+    background-color: #323232;
+    float: left;
+    margin-right: 30px;
+}
+.card:last-child {
+    float: right;
+}
+.card:first-child {
+    margin-left: 30px;
+}
+.card p {
+    font-family: "roboto black";
+    font-size: 18px;
+    text-transform: uppercase;
+    color: #ffffff;
+    margin-top: 8px;
+    margin-left: 12px;
+    display: inline-block;
+}
+.price {
+    float: right;
+    text-align: center;
+    margin-top: -4px;
+    width: 50px;
+    height: 40px;
+    background-color: rgba(255, 255, 255, 0.5);
+}
+.price p {
+    margin-top: 12px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.card:hover {
+    background-color: #1abc9c;
+    cursor: pointer;
+}
+.foto {
+    position: relative;
+}
+.card_menu {
+    position: absolute;
+    background-color: #0f0101;
+    background-color: rgba( 0, 0, 0, 0.0);
+    width: 235px;
+    height: 260px;
+    left: 10px;
+    top: 13px;
+    display: none;
+}
+.card:hover .card_menu {
+    background-color: rgba( 0, 0, 0, 0.5);
+    display: block;
+}
+.card_menu li {
+    list-style: none;
+    text-align: center;
+    border: 1px solid #ffffff;
+    color: #ffffff;
+    background: none; 
+    width: 48px;
+    height: 48px;
+    margin-right: 9px;
+    float: left;
+}
+.card_menu li:nth-child(3) {
+    float: right;
+    margin-right: 32px;
+}
+.card_menu li:nth-child(3)::after{
+    content: " ";
+    clear: both;
+    display: table;
+}
+.card_menu ul {
+    margin-top: 82px;
+    margin-left: 35px;
+    display: inline-block;
+    padding: 0;
+}
+.card_menu li:last-child {
+    width: 166px;
+    margin-top: 10px;
+    background-color: #323232;
+    text-align: center;
+}
+.card_menu li img {
+    margin-top: 12px;
+}
+.card_menu li:last-child>img {
+    margin-left: -3px;
+    margin-top: 10px;
+}
+.add {
+    text-transform: uppercase;
+    font-size: 14px;
+    margin-left: 15px;
+    vertical-align: super;
+    font-family: "opensans"; 
+}
+.card_menu li:hover {
+    background-color: #1abc9c;    
+}
+footer {
+    height: 90px;
+    background-color: #323232;
+    font-family: "opensans";
+    font-size: 14px;
+    color: f0f0f0;
+    text-align: center;
+    width: 1600px;
+    margin-left: -215px;
+}
+footer p{
+    text-transform: capitalize;
+    padding-top: 38px;
+    margin: 0;
+    color: #e9f0fd;
+}
+footer p span {
+    color: #1abc9c;
 }
