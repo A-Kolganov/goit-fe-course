@@ -174,7 +174,7 @@ h3::after {
     width: 255px;
     background-color: #323232;
     float: left;
-    margin-right: 30px;
+    margin: 15px 0;
 }
 .card p {
     font-family: "roboto black";
