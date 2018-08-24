@@ -23,10 +23,7 @@ body {
     padding: 0;
     overflow-x: hidden;
 }
-.page {
-    margin-left: auto;
-    margin-right: auto;
-}
+
 header {
     height: 91px;
     width: 1110px;
@@ -75,13 +72,18 @@ a {
 a:hover {
     color: #1abc9c;
 }
+main {
+    margin-left: auto;
+    margin-right: auto;
+    width: 1110px;
+}
 .content {
     width: 1600px;
     height: 600px;
     position: relative;
     background-image: url(../img/mainfoto_1600x600.png);
-    margin-left: auto;
-    margin-right: auto;
+    margin-left: -245px;;
+    
 }
 h1 {
     text-transform: uppercase;
