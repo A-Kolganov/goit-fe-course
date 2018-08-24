@@ -49,7 +49,7 @@ nav ul {
 }
 nav ul li {
     display: inline;
-    margin-left: 60px;
+    margin-left: 58px;
 }
 nav ul li:first-child {
     margin-left: 0px;
@@ -67,4 +67,30 @@ nav ul li a:hover {
     color: #f38181;
     border-bottom: #f38181 solid 3px;
     padding-bottom: 8px;
+}
+.section_heading {
+    color: #333333;
+    text-align: center;
+    margin-top: 85px;
+}
+.section_heading p{
+    font-family: "kaushan";
+    font-size: 24px;
+}
+.section_heading p::first-letter {
+    text-transform: uppercase;
+}
+.section_heading h1 {
+    font-family: "montserrat bold";
+    font-size: 30px;
+    text-transform: uppercase;
+}
+.section_heading h1::after {
+    content: " ";
+    clear: both;
+    display: block;
+    background-color: #f38181;
+    height: 3px;
+    width: 60px;
+    margin: 45px auto 0;
 }
