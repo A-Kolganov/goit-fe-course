@@ -1,0 +1,70 @@
+@font-face {
+    font-family: "kaushan";
+    src: url(../fonts/KaushanScript-Regular.ttf);
+}
+@font-face {
+    font-family: "montserrat bold";
+    src: url(../fonts/Montserrat-Bold.ttf);
+}
+@font-face {
+    font-family: "montserrat";
+    src: url(../fonts/Montserrat-Regular.ttf);
+}
+@font-face {
+    font-family: "roboto light italic";
+    src: url(../fonts/Roboto-LightItalic.ttf);
+}
+@font-face {
+    font-family: "roboto";
+    src: url(../fonts/Roboto-Regular.ttf);
+}
+body {
+    margin: 0;
+    padding: 0;
+}
+header{
+    width: 1220px;
+    height: 80px;
+    margin: 0 auto;
+}
+.logo {
+    float: left;
+    margin-left: 10px;
+}
+.logo p{
+    font-family: "montserrat bold";
+    font-size: 30px;
+    color: #95e1d3;
+    line-height: 30px;
+    margin-top: 28px;
+}
+
+nav ul {
+    font-family: "montserrat bold";
+    font-size: 14px;
+    list-style: none;
+    padding: 0;
+    margin-top: 38px;
+    float: right;
+}
+nav ul li {
+    display: inline;
+    margin-left: 60px;
+}
+nav ul li:first-child {
+    margin-left: 0px;
+}
+nav ul li:last-child{
+    margin-right: 10px;
+}
+nav ul li a {
+    text-decoration: none;
+    color: #95e1d3;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+nav ul li a:hover {
+    color: #f38181;
+    border-bottom: #f38181 solid 3px;
+    padding-bottom: 8px;
+}
