@@ -94,3 +94,33 @@ nav ul li a:hover {
     width: 60px;
     margin: 45px auto 0;
 }
+.flexbox {
+    display: flex;
+}
+.item {
+    width: 380px;
+    height: 90px;
+}
+.item .icon{
+    float: left;
+    width: 80px;
+    text-align: center;
+    padding-top: 3px;
+    height: 100%;
+}
+.item_name {
+  
+}
+h3{
+    font-family: "montserrat";
+    font-size: 14px;
+    margin: 0;
+    text-transform: uppercase;
+    color: #333333;
+}
+article {
+    font-family: "roboto";
+    font-size: 15px;
+    color: #999999;
+    padding-top: 17px;
+}
