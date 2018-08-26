@@ -84,6 +84,10 @@ nav ul li a:hover {
     font-family: "montserrat bold";
     font-size: 30px;
     text-transform: uppercase;
+    padding-bottom: 30px;
+}
+.about_us .section_heading {
+    margin-top: 40px;
 }
 .section_heading h1::after {
     content: " ";
@@ -100,7 +104,7 @@ nav ul li a:hover {
     justify-content: space-around;
     align-content: space-around;
     width: 1200px;
-    height: 360px;
+    height: 335px;
     margin: 0 auto;
 }
 .item {
@@ -130,4 +134,47 @@ article {
     font-size: 15px;
     color: #999999;
     padding-top: 17px;
+}
+.about_us .section_heading article {
+    width: 960px;
+    height: 60px;
+    margin: 0 auto;
+    padding: 0;
+}
+.foto {
+    background-image: url(../img/foto/foto1.jpg);
+    width: 380px;
+    height: 470px;
+}
+.social {
+    position: absolute;
+    display: flex;
+}
+.social ul{
+    justify-content: center;
+    align-items: center;
+    width: 380px;
+    height: 470px;
+    display: flex;
+    padding: 0px;
+}
+.social ul li {
+    display: inline-block;
+    list-style: none;
+    height: 58px;
+    width: 58px;
+    background-color: #fce38c;
+    justify-content: center;
+    align-items: center;
+    outline: 1px #f9bd87 solid;
+    position: relative;
+}
+.social ul li:hover {
+    background-color: #95e1d3;
+}
+li img {
+   position: absolute;
+   top: 50%;
+   left:50%;
+   transform: translate(-50% , -50%);
 }
