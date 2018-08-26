@@ -119,9 +119,6 @@ nav ul li a:hover {
     padding-top: 3px;
     height: 100%;
 }
-.item_name {
-  
-}
 h3{
     font-family: "montserrat";
     font-size: 14px;
@@ -145,10 +142,24 @@ article {
     background-image: url(../img/foto/foto1.jpg);
     width: 380px;
     height: 470px;
+    margin: 0;
+}
+.foto:nth-child(2) {
+    background-image: url(../img/foto/foto2.jpg);
+}
+.foto:last-child {
+    background-image: url(../img/foto/foto3.jpg);
 }
 .social {
-    position: absolute;
-    display: flex;
+    visibility: hidden;
+}
+.foto:hover {
+    transform: translate( -10px, -10px);
+    transition-duration: 2s;
+    box-shadow: 10px 10px  #95e1d3;
+}
+.foto:hover .social {
+    visibility: visible;
 }
 .social ul{
     justify-content: center;
@@ -157,6 +168,7 @@ article {
     height: 470px;
     display: flex;
     padding: 0px;
+    margin: 0px;
 }
 .social ul li {
     display: inline-block;
@@ -164,8 +176,6 @@ article {
     height: 58px;
     width: 58px;
     background-color: #fce38c;
-    justify-content: center;
-    align-items: center;
     outline: 1px #f9bd87 solid;
     position: relative;
 }
@@ -177,4 +187,79 @@ li img {
    top: 50%;
    left:50%;
    transform: translate(-50% , -50%);
+}
+.foto:hover .effect {
+    background-image: linear-gradient(to top, #fce38a, #f38181);
+    position: absolute;
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    opacity: 0.9;
+}
+figcaption {
+    font-family: "montserrat";
+    font-size: 14px;
+    color: #333333;
+    text-align: center;
+    text-transform: uppercase;
+    display: block;
+    margin-top: 30px;
+}
+figcaption span {
+    display: block;
+    font-family: "roboto light italic";
+    font-size: 15px;
+    color: #999999;
+    margin-top: 15px;
+    margin-bottom: 80px;
+}
+.about_us .flexbox{
+    display: flex;
+    width: 1200px;
+    height: 670px;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+}
+footer {
+    height: 64px;
+    border-top: 1px solid #e5e5e5;
+}
+footer p{
+    font-family: "montserrat";
+    font-size: 14px;
+    color: #333333;
+    margin-top: 25px;
+    margin-left: 10px;
+}
+.copyrights {
+    float: left;
+}
+footer p span {
+    color: #f38181;
+}
+form {
+    float: right;
+}
+input {
+    height: 20px;
+    width: 210px;
+    border: 1px solid #e7e7e7;
+    margin: 12px 0 0 0;
+    font-family: "roboto light italic";
+    font-size: 15px;
+    padding: 10px;
+}
+input::placeholder {
+    color: #cccccc;
+}
+button {
+    height: 42px;
+    width: 150px;
+    margin: 0 10px 0 -4px;
+    border: none;
+    background-color: #95e1d3;
+    color: #ffffff;
+    font-family: "montserrat bold";
+    font-size: 14px;
+    text-transform: uppercase;
 }
