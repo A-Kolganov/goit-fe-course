@@ -21,7 +21,6 @@
 body {
     margin: 0;
     padding: 0;
-    overflow-x: hidden;
 }
 
 header {
@@ -142,7 +141,6 @@ h2 {
     cursor: pointer;
 }
 section.items {
-    width: 1600px;
     background-color: #e9f0fd;
     height: 680px;
     margin-left: auto;
@@ -280,7 +278,6 @@ footer {
     font-size: 14px;
     color: #f0f0f0;
     text-align: center;
-    width: 1600px;
     margin-left: auto;
     margin-right: auto;
 }
