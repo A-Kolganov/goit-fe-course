@@ -1,0 +1,146 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+header {
+    height: 40px;
+    background-color: #ff5500;
+    font-size: 25px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    line-height: 38px;
+    text-transform: uppercase;
+    text-align: center;
+}
+h2 {
+    font-size: 25px;
+    text-align: center;
+    text-transform: capitalize;
+    color: #ff5500;
+    background-color: #0055ff;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    border: #ffffff dotted 2px;
+}
+.multy_background {
+    display: block;
+    height: 100vh;
+    width: 100vw;
+    background-image: linear-gradient( 50deg, rgba(100, 200, 200, 0.3), rgba(233, 202, 80, 0.3)),url(../img/logo.png), url(../img/soccer-stadium-Wallpaper.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.box {
+    width: 400px;
+    height: 400px;
+    margin: 20px auto;
+    background-color: #424242 ; 
+    position: relative;
+    border: 1px solid #000000;
+}
+.box div{
+    position: absolute;
+    width: 100px;
+    height: 100px;   
+}
+p{
+    display: inline-block;
+    font-size: 30px;
+    margin-left: 50%;
+    margin-top: 50%;
+    transform: translate(-50%,-50%);
+    color: #ffffff;
+}
+.box div:first-child {
+    background-color: #0055ff;
+    left: 0;
+    top: 0;
+}
+.box div:nth-child(2){
+    background-color: #ff55ff;
+    left: 50%;
+    top: 0;
+    transform: translate(-50%,0);
+}
+.box div:nth-child(3) {
+    background-color: #ffff00;
+    right: 0;
+    top: 0;
+}
+.box div:nth-child(4) {
+    background-color: #33ff33;
+    left: 0;
+    top: 50%;
+    transform: translate(0,-50%);
+}
+.box div:nth-child(5) {
+    background-color: #ff4444;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+}
+.box div:nth-child(6){
+    background-color: #000000;
+    right: 0;
+    top: 50%;
+    transform: translate(0,-50%);
+}
+.box div:nth-child(7) {
+    background-color: #ffffff;
+    left: 0;
+    bottom: 0;
+}
+.box div:nth-child(7) p {
+    color: #000000;
+}
+.box div:nth-child(8) {
+    background-color: #8f8f8f;
+    left: 50%;
+    bottom: 0;
+    transform: translate(-50%,0);
+}
+.box div:last-child {
+    background-color: #0099ff;
+    right: 0;
+    bottom: 0;
+}
+.task_3 {
+    height: 500px;
+}
+.menu {
+    list-style: none;
+    padding: 10px;
+    text-align: center;
+}
+.menu_item {
+    position: relative;
+    display: inline-block;
+    font-size: 20px;
+    color: #490a4e;
+    background-color: #0c7bd6;
+    text-transform: uppercase;
+    padding: 10px;
+    margin: 20px;
+    width: 320px;
+}
+.submenu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    list-style: none;
+}
+.menu_item:hover .submenu{
+    display: block;
+}
+.submenu_item {
+    display: inline-block;
+    background-color: #329ff8;
+    padding: 15px;
+    width: 200px;
+}
+.submenu_item a {
+    text-decoration: none;
+    color: #ffffff;
+}
+.submenu_item a:hover {
+    color: #ff4444;
+}
