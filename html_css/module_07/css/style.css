@@ -13,14 +13,6 @@
     font-weight: 700;
     font-style: normal;
 }
-
-@font-face {
-    font-family: "Lora";
-    src: url(../fonts/lora-v12-latin-italic.woff) format('woff'), 
-         url(../fonts/lora-v12-latin-italic.woff2) format('woff2');
-    font-weight: 700;
-    font-style: italic;
-}
 @font-face {
     font-family: "droidserif";
     src: url(../fonts/DroidSerif-Italic-webfont.woff) format('woff');
@@ -38,13 +30,6 @@
     font-family: "champagneregular";
     src: url(../fonts/cac_champagne-webfont.woff) format('woff');
     font-weight: normal;
-    font-style: normal;
-}
-@font-face {
-    font-family: "Painting Sunlight";
-    src: url(../fonts/painting-sunlight.woff) format('woff'), 
-         url(../fonts/painting-sunlight.woff2) format('woff2');
-    font-weight: 400;
     font-style: normal;
 }
 * {
@@ -94,7 +79,7 @@ nav ul li a:hover {
     color: #fed751;
 }
 .services {
-    margin: 108px auto 0;
+    margin: 108px auto 108px;
 }
 .services h1,p {
     text-align: center;
@@ -149,4 +134,94 @@ h1{
     font-size: 14px;
     color: #777777;
     text-align: center;
+}
+section:last-of-type {
+    background: url(../img/Map\ Image.png), #222222;
+    margin: 0;
+    background-repeat: no-repeat;
+    background-position: center right;
+}
+.contact h3{
+    font-family: "Montserrat";
+    font-weight: 700;
+    font-style: normal;
+    font-size: 40px;
+    color: #ffffff;
+    text-align: center;
+    text-transform: uppercase;
+    padding-top: 110px;
+    margin: 0;
+}
+.contact p {
+    font-family: "droidserif";
+    font-style: italic;
+    font-weight: normal;
+    font-size: 16px;
+    color:  #777777;
+    text-align: center;
+    margin: 0;
+    padding-top: 25px;
+}
+form {
+    padding-top: 77px;
+    padding-bottom: 115px;
+     
+     
+    max-width: 940px; 
+    margin: 0 auto; 
+    
+}
+form>.flexbox{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    flex-wrap: wrap;
+    height: 213px;
+    align-content: space-between;
+}
+input {
+    padding: 15px;
+    border: none;
+    border-radius: 3px;
+    width: 455px;
+    height: 55px;
+}
+textarea {
+    height: 213px;
+    width: 455px;
+    resize: none;
+    padding: 15px;
+    border-radius: 3px;
+    border: none;
+}
+::placeholder {
+    font-family: "Montserrat";
+    font-size: 14px;
+    font-weight: 700;
+    color: #bbbbbb;
+    text-transform: uppercase;
+}
+button {
+    width: 241px;
+    height: 57px;
+    border-radius: 3px;
+    border: none;
+    background-color: #fed751;
+    color: #ffffff;
+    text-transform: uppercase;
+    text-align: center;
+    font-family: "montserrat";
+    font-weight: 700;
+    font-size: 18px;
+    margin: 30px auto 0;
+    display: block;
+}
+input:invalid:focus,textarea:invalid:focus {
+    outline: #ff0000 solid 2px;
+}
+input:valid:focus,textarea:valid:focus {
+    outline: #00ff00 solid 2px;
+}
+input:focus,textarea:focus{
+    outline: 0;
 }
