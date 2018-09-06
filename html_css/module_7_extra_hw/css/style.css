@@ -1,0 +1,82 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+header {
+    height: 50px;
+    background-color: #777777;
+    width: 100%;
+}
+h1 {
+    font-size: 40px;
+    text-align: center;
+    color: #222222;
+}
+.task{
+    height: 50px;
+    background-color: #229999;
+    border: #777777 solid 2px;
+}
+h2{
+    text-align: center;
+    font-size: 25px;
+    color: #222222;
+}
+table {
+    width: 400px;
+    height: 500px;
+    text-align: center;
+    border-spacing: 0 0 ;
+    margin: 30px auto;
+    padding: 10px;
+    
+}
+.pricelist {
+    box-shadow: 0 0 15px #229999;
+    display: inline-block;
+    margin: 10px 0 10px 50%;
+    transform: translate( -50%, 0);
+}
+caption {
+    font-size: 30px;
+    padding: 5px;
+}
+th{
+    background-color: #000044;
+    color: #ffffff;
+}
+tr td:first-child {
+    text-align: left;
+}
+td , tr{
+    border: 1px #000044 solid;
+    margin: 0;
+    padding: 10px;
+    font-weight: bolder;
+}
+form{
+    display: flex;
+    flex-direction: column;
+}
+input, textarea {
+    width: 400px;
+    padding: 20px;
+    font-size: 20px;
+    resize: none;
+    margin: 15px auto;
+}
+button {
+    width: 200px;
+    padding: 20px;
+    background-color: #882222;
+    color: #ffffff;
+    margin: 15px auto;
+}
+.send {
+    box-shadow: 0 0 15px #229999;
+    display: inline-block;
+    margin: 20px 0 10px 50%;
+    transform: translate( -50%, 0);
+    padding: 15px;
+}
