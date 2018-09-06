@@ -1,0 +1,119 @@
+@font-face {
+    font-family:"montserrat";
+    src: url(../fonts/montserrat-v12-latin-500.woff) format(woff),
+         url(../fonts/montserrat-v12-latin-500.woff2) format(woff2);
+    font-style: normal;
+    font-weight: 500;
+}
+@font-face {
+    font-family:"montserrat";
+    src: url(../fonts/montserrat-v12-latin-700.woff) format(woff),
+         url(../fonts/montserrat-v12-latin-700.woff2) format(woff2);
+    font-style: normal;
+    font-weight: 700;
+}
+@font-face {
+    font-family:"roboto";
+    src: url(../fonts/roboto-v18-latin-300.woff) format(woff),
+         url(../fonts/roboto-v18-latin-300.woff2) format(woff2);
+    font-style: normal;
+    font-weight: 300;
+}
+@font-face {
+    font-family:"roboto";
+    src: url(../fonts/roboto-v18-latin-regular.woff) format(woff),
+         url(../fonts/roboto-v18-latin-regular.woff2) format(woff2);
+    font-style: normal;
+    font-weight: 400;
+}
+* {
+    box-sizing: border-box;
+}
+main {
+    background: url(../img/background_320_540.jpg);
+    background-repeat: no-repeat;
+    background-position:center center;
+    height: 100vh;
+    width: 100%;
+    max-width: 320px;
+    max-height: 540px;
+    margin: 0 auto;
+}
+header{
+    display: flex;
+    flex-direction: column-reverse;
+    height: 41%;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5%;
+}
+.logo {
+
+}
+h2{
+    font-family: "montserrat";
+    font-weight: 700;
+    font-style: normal;
+    font-size: 20px;
+    color: #ffffff;
+    padding: 0 10px;
+}
+button {
+    font-family: "montserrat";
+    font-weight: 700;
+    font-style: normal;
+    font-size: 14px;
+    background: transparent;
+    border: none;
+    color: #ffffff;
+    padding: 8px 15px;
+}
+button::first-letter {
+    text-transform: uppercase;
+}
+header button:last-of-type {
+    border: 2px solid #ffffff;
+    border-radius: 30px;
+}
+h1 {
+    font-family: "montserrat";
+    font-weight: 700;
+    font-style: normal;
+    font-size: 30px; 
+    color: #ffffff;   
+    text-transform: uppercase;
+    text-align: center;
+    margin: 0;
+    padding: 5px 10px;
+}
+.main_heading p{
+    font-family: "roboto";
+    font-weight: 400;
+    font-style: normal;
+    font-size: 18px;
+    color: #ffffff;
+    text-align: center;
+    padding: 8px 20px;
+    margin: 0; 
+}
+.main_heading p::first-letter,.main_heading a::first-letter{
+    text-transform: uppercase;
+}
+.main_heading {
+    height: 59%;
+}
+.main_heading>a {
+    font-family: "montserrat";
+    font-weight: 700;
+    font-style: normal;
+    font-size: 14px; 
+    color: #ffffff;
+    text-align: center;
+    text-decoration: none;
+    background-color: #ff4e50;
+    width: 87.5%;
+    margin: 10px auto;
+    display: block;
+    padding: 10px;
+    border-radius: 20px;
+}
