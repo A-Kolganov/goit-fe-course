@@ -111,7 +111,72 @@ main div a{
 .search_partner {
     text-align: center;
 }
-@media screen and (min-width: 769px){
+h3 {
+    font-family: "montserrat";
+    font-size: 22px;
+    font-weight: 700;
+    color: #333333;
+    text-align: center;
+}
+h3::first-letter {
+    text-transform: uppercase;
+}
+.section_title {
+    margin: 70px auto 30px;
+}
+.cards_menu {
+    display: flex;
+    justify-content: center;
+    flex-direction: raw;
+    align-items: center;
+    align-content: center;
+    flex-wrap: wrap;
+    max-width: 490px;
+    margin: 0 auto;
+}
+.card figure>div {
+    position: relative;
+    width: 122px;
+    height: 122px;
+    margin: 0 auto;
+}
+.icon {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 40px;
+    height: 40px;
+    border: #ffffff 5px solid;
+    border-radius: 20px;
+    background: url(../img/icon/Shape\ 128.png),#ff4e50;
+    background-position: 6px 6px;
+    background-repeat: no-repeat;
+}
+figcaption {
+    font-family: "montserrat";
+    font-weight: 700;
+    font-size: 14px;
+    color: #333333;
+    text-align: center;
+    text-transform: capitalize;
+    padding: 20px 0;
+}
+.card p {
+    font-family: "roboto";
+    font-weight: 400;
+    font-size: 14px;
+    color: #666666;
+    text-align: center;
+    width: 220px;
+    padding: 5px 10px;
+}
+.card {
+    margin: 15px 10px;
+}
+@media screen and (min-width: 340px){
+
+}
+@media screen and (min-width: 768px){
     main{
         background: url(../img/background_1440x700.jpg);
         height: 100vh;
@@ -144,5 +209,10 @@ main div a{
     }
     .search_partner a{
         padding: 15px;
+    }
+    .cards_menu {
+        flex-direction: row;
+        justify-content: center;
+        max-width: 960px;
     }
 }
