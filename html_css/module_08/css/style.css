@@ -36,8 +36,8 @@ main {
     background-position:center center;
     height: 100vh;
     width: 100%;
-    min-width: 240px;
-    min-height: 320px;
+    min-width: 320px;
+    min-height: 340px;
     max-width: 768px;
     max-height: 700px;
     margin: 0 auto;
@@ -49,19 +49,20 @@ h2{
     font-weight: 700;
     text-transform: capitalize;
 }
-button {
+main button {
     background: transparent;
     font-family: "monserrat";
     font-size: 14px;
     font-weight: 700;
     color: #ffffff;
-    border: none;
+    border: 2px solid transparent;
     padding: 6px 10px;
+    cursor: pointer;
 }
-button::first-letter {
+main button::first-letter {
     text-transform: capitalize;
 }
-button:last-child  {
+main button:hover  {
     border: #ffffff solid 2px;
     border-radius: 20px;
 }
@@ -107,6 +108,7 @@ main div a{
     background: #ff4e50;
     padding: 10px 40px;
     border-radius: 20px;
+    cursor: pointer;
 }
 .search_partner {
     text-align: center;
@@ -124,10 +126,13 @@ h3::first-letter {
 .section_title {
     margin: 70px auto 30px;
 }
+section {
+    min-width: 320px;;
+}
 .cards_menu {
     display: flex;
     justify-content: center;
-    flex-direction: raw;
+    flex-direction: row;
     align-items: center;
     align-content: center;
     flex-wrap: wrap;
@@ -148,7 +153,25 @@ h3::first-letter {
     height: 40px;
     border: #ffffff 5px solid;
     border-radius: 20px;
+
+}
+.part_one {
     background: url(../img/icon/Shape\ 128.png),#ff4e50;
+    background-position: 6px 6px;
+    background-repeat: no-repeat;
+}
+.part_two {
+    background: url(../img/icon/Shape\ 153.png), #ffa507;
+    background-position: 6px 6px;
+    background-repeat: no-repeat;
+}
+.part_three {
+    background: url(../img/icon/Shape\ 155.png), #1cd7ad;
+    background-position: 6px 6px;
+    background-repeat: no-repeat;
+}
+.part_four {
+    background: url(../img/icon/Shape\ 170.png), #4e73db;
     background-position: 6px 6px;
     background-repeat: no-repeat;
 }
@@ -173,6 +196,27 @@ figcaption {
 .card {
     margin: 15px 10px;
 }
+.button_position {
+    display: flex;
+    justify-content: center;
+}
+section button {
+    max-width: 280px;
+    width: 100%;
+    height: 40px;
+    border: 2px solid #ff5b5d;
+    border-radius: 20px;
+    background: transparent;
+    font-family: "montserrat";
+    font-size: 14px;
+    font-weight: 600;
+    text-align: center;
+    margin: 25px 10px;
+    color: #ff5b5d;
+}
+section button::first-letter {
+    text-transform: uppercase;
+}
 @media screen and (min-width: 340px){
 
 }
@@ -183,6 +227,7 @@ figcaption {
         width: 100%;
         max-width: 1440px;
         max-height: 700px;
+        min-width: 460px;
         background-repeat: no-repeat;
         background-position: center center;
     }
@@ -214,5 +259,6 @@ figcaption {
         flex-direction: row;
         justify-content: center;
         max-width: 960px;
+        align-items: flex-start;
     }
 }
