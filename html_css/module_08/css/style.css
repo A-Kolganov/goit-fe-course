@@ -137,7 +137,7 @@ section {
     align-content: center;
     flex-wrap: wrap;
     max-width: 490px;
-    margin: 0 auto;
+    margin: 0 25px;
 }
 .card figure>div {
     position: relative;
@@ -216,9 +216,6 @@ section button {
 }
 section button::first-letter {
     text-transform: uppercase;
-}
-@media screen and (min-width: 340px){
-
 }
 @media screen and (min-width: 768px){
     main{
