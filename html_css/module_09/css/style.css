@@ -1,0 +1,27 @@
+@import url(fonts.css);
+
+.container {
+    display: block;
+}
+.main-screen {
+    background: url(../img/background_320_540.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 320px;
+    margin: 0 auto;
+}
+header {
+    width: 100%;
+    height: auto;
+}
+.main-screen__logo-nav a{
+    font-family: "roboto";
+    font-size: 20px;
+    color: #ffffff;
+    text-decoration: none;
+    text-align: center;
+    display: block;
+}
+.menu-links a {
+    font-size: 14px;
+}
