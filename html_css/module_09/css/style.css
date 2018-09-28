@@ -1,1 +1,82 @@
 @import url('fonts.css');
+.wrapper-inner {
+    background: url('../img/background_320_540.jpg');
+    background-repeat: no-repeat;
+    background-position: center center;
+    width: 320px;
+    height: 540px;
+    padding: 20px;
+}
+h1 {
+    display: inline-block;
+    margin-top: 80px;
+}
+h1 a{
+    font-family: "montserrat";
+    font-weight: 700;
+    color: #ffffff;
+    font-size: 20px;
+    letter-spacing: 0.5px;
+    text-decoration: none;
+}
+h1 a:hover {
+    border: none;
+    text-decoration: none;
+}
+li a {
+    font-family: "montserrat";
+    font-weight: 700;
+    font-size: 14px;
+    color: #ffffff;
+    text-decoration: none;
+    padding: 7px 12px;
+    border:  2px solid transparent;
+}
+ul{
+    padding: 5px ;
+}
+ul li{
+    padding: 0;
+    list-style: none;
+}
+a:focus {
+    text-decoration: none;
+    color: #ffffff;
+}
+a:hover {
+    border: #ffffff 2px solid;
+    border-radius: 20px;
+    color: #ffffff;
+    text-decoration: none;
+}
+.header div,.header nav {
+    margin: 0;
+}
+h2{
+    font-family: "montserrat";
+    font-weight: 700;
+    font-size: 30px;
+    color: #ffffff;
+    text-transform: uppercase;
+    letter-spacing: -0.75px;
+    margin-top: 17px; 
+}
+.main-screen__title p{
+    font-family: "roboto";
+    font-weight: 300;
+    font-size: 18px;
+    color: #ffffff;
+    line-height: 19px;
+    margin-top: 4px;
+}
+.main-screen__title a{
+    font-family: "montserrat";
+    font-weight: 700;
+    font-size: 14px;
+    color: #ffffff;
+    background-color: #ff4e50;
+    padding: 9px 10px;
+    border-radius: 20px;
+    letter-spacing: -0.3px;
+    margin-top: 2px;
+}

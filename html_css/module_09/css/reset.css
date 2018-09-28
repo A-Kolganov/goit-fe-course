@@ -34,6 +34,7 @@ html {
 *:before,
 *:after {
 	box-sizing: inherit;
+	margin: 0;
 }
 
 /* consider resetting the default cursor: https://gist.github.com/murtaugh/5247154 */
