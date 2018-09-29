@@ -3,7 +3,7 @@
     background: url('../img/background_320_540.jpg');
     background-repeat: no-repeat;
     background-position: center center;
-    width: 320px;
+    min-width: 320px;
     height: 540px;
     padding: 20px;
 }
@@ -29,7 +29,7 @@ li a {
     font-size: 14px;
     color: #ffffff;
     text-decoration: none;
-    padding: 7px 12px;
+    padding: 7px 15px;
     border:  2px solid transparent;
 }
 ul{
