@@ -49,6 +49,8 @@
         font-size: 14px;
     }
 }
+/* Making for laptop 1024 */
+
 @media (min-width: 992px) {
     .wrapper-inner {
         width: 100%;

@@ -1,4 +1,5 @@
 @import url('fonts.css');
+
 .wrapper-inner {
     background: url('../img/background_320_540.jpg');
     background-repeat: no-repeat;
@@ -79,4 +80,62 @@ h2{
     border-radius: 20px;
     letter-spacing: -0.3px;
     margin-top: 2px;
+}
+.users-pages{
+    padding: 60px 10px;
+}
+h3 {
+    font-family: "montserrat";
+    font-size: 21px;
+    font-weight: 700;
+    color: #333333;
+    text-align: center;
+    padding-top: 6px;
+    letter-spacing: 0.2px;
+    margin: 0;
+}
+h3::first-letter{
+    text-transform: uppercase;
+}
+img {
+    margin: 16px auto 0;
+    display: block;
+}
+h4 {
+    font-family: "montserrat";
+    font-size: 14px;
+    font-weight: 700;
+    color: #333333;
+    text-align: center;
+    padding-top: 18px;
+    text-transform: capitalize;
+    letter-spacing: 0.4px;
+}
+.users-pages__cards__card p {
+    text-align: center;
+    font-family: "roboto";
+    font-size: 14px;
+    font-weight: 400;
+    color: #666666;
+    padding: 4px 33px;
+    line-height: 19px;
+}
+.image-wrapper {
+    position: relative;
+    width: 121px;
+    height: 121px;
+    margin: 0 auto;
+}
+.card-icon {
+    position: absolute;
+    background: url('../img/icon/Shape\ 128.png') #ff4e50;
+    width: 20px;
+    height: 20px;
+    right: 0;
+    bottom: 0;
+    border: 2px solid #ffffff;
+    border-radius: 20px;
+    padding: 15px;
+    background-repeat: no-repeat;
+    background-position: 6px 6px;
 }
