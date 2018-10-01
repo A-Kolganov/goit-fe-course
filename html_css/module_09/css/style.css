@@ -1,4 +1,5 @@
 @import url('fonts.css');
+@import url('bootstrap.css');
 
 .wrapper-inner {
     background: url('../img/background_320_540.jpg');
