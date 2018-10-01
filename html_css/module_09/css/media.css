@@ -10,15 +10,6 @@
 }
 @media (min-width: 768px) {
     .wrapper-inner {
-        background: url(../img/background_1440x700.jpg);
-        width: 100%;
-        max-width: 1600px;
-        height: 100vh;
-        max-height: 700px;
-        background-position: center;
-        background: cover;
-    }
-    .wrapper-inner {
         padding: 25px 27px;
     }
     h1 {
@@ -47,6 +38,17 @@
     .main-screen__title a{
         letter-spacing: 0.1px;
         font-size: 14px;
+    }
+}
+@media (min-width: 769px) {
+    .wrapper-inner {
+        background: url(../img/background_1440x700.jpg);
+        width: 100%;
+        max-width: 1600px;
+        height: 100vh;
+        max-height: 700px;
+        background-position: center;
+        background: cover;
     }
 }
 /* Making for laptop 1024 */

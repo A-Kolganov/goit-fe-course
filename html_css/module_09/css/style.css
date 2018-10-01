@@ -83,7 +83,7 @@ h2{
     margin-top: 2px;
 }
 .users-pages{
-    padding: 60px 10px;
+    padding: 60px 0px;
 }
 h3 {
     font-family: "montserrat";
@@ -91,7 +91,7 @@ h3 {
     font-weight: 700;
     color: #333333;
     text-align: center;
-    padding-top: 6px;
+    padding: 6px 10px 0;
     letter-spacing: 0.2px;
     margin: 0;
 }
@@ -99,7 +99,7 @@ h3::first-letter{
     text-transform: uppercase;
 }
 img {
-    margin: 16px auto 0;
+    margin: 0 auto;
     display: block;
 }
 h4 {
@@ -118,8 +118,12 @@ h4 {
     font-size: 14px;
     font-weight: 400;
     color: #666666;
-    padding: 4px 33px;
+    padding: 4px;
     line-height: 19px;
+    margin: 0;
+}
+.users-pages__cards__card {
+    padding-bottom: 25px;
 }
 .image-wrapper {
     position: relative;
@@ -129,7 +133,6 @@ h4 {
 }
 .card-icon {
     position: absolute;
-    background: url('../img/icon/Shape\ 128.png') #ff4e50;
     width: 20px;
     height: 20px;
     right: 0;
@@ -137,6 +140,37 @@ h4 {
     border: 2px solid #ffffff;
     border-radius: 20px;
     padding: 15px;
+}
+.card-one{
+    background: url('../img/icon/Shape\ 128.png') #ff4e50;
     background-repeat: no-repeat;
     background-position: 6px 6px;
+}
+.card-two {
+    background: url(../img/icon/Shape\ 155.png) #ffa507;
+    background-repeat: no-repeat;
+    background-position: 8px 7px;
+}
+.card-three {
+    background: url(../img/icon/Shape\ 153.png) #1cd7ad;
+    background-repeat: no-repeat;
+    background-position: 6px 5px;
+}
+.card-four {
+    background: url(../img/icon/Shape\ 170.png) #4e73db;
+    background-repeat: no-repeat;
+    background-position: 5px 7px;
+}
+.cards_button button {
+    background: transparent;
+    border: 2px #ff4e50 solid;
+    border-radius: 20px;
+    color: #ff4e50;
+    font-family: "montserrat";
+    font-size: 14px;
+    font-weight: 700;
+    display: block;
+    padding: 8px 65px;
+    margin: 0 auto;
+    letter-spacing: -0.5px;
 }
