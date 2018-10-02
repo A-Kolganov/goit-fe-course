@@ -1,0 +1,38 @@
+
+@media (min-width: 769px) {
+    .wrapper-inner {
+        background: url(../img/background_1440x700.jpg);
+        width: 100%;
+        max-width: 1600px;
+        height: 100vh;
+        max-height: 700px;
+        background-position: center;
+        background: cover;
+    }
+}
+/* Making for laptop 1024 */
+
+@media (min-width: 992px) {
+    .wrapper-inner {
+        width: 100%;
+        min-width: 942px;
+        max-width: 1440px;
+        height: 100vh;
+        max-height: 700px;
+    }
+    .header>div {
+        padding: 0;
+    }
+    .header h1 a{
+        margin-right: 13px;
+    }
+    .nav ul {
+        margin-left: -5px;
+    }
+    .users-pages__cards__card {
+        margin: 0;
+    }
+    .cards-button {
+        padding-top: 30px;
+    }
+}
