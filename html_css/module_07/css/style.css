@@ -1,139 +1,112 @@
-@font-face {
-    font-family: "Montserrat";
-    src: url('../fonts/montserrat-v12-latin-600.woff') format('woff'), 
-         url('../fonts/montserrat-v12-latin-600.woff2') format('woff2');
-    font-weight: 600;
-    font-style: normal;
-}
+@import url('fonts.css');
 
-@font-face {
-    font-family: "Montserrat";
-    src: url('../fonts/montserrat-v12-latin-700.woff') format('woff'), 
-         url('../fonts/montserrat-v12-latin-700.woff2') format('woff2');
-    font-weight: 700;
-    font-style: normal;
+.wrapper {
+    padding: 0 10px;
 }
-@font-face {
-    font-family: "droidserif";
-    src: url('../fonts/DroidSerif-Italic-webfont.woff') format('woff');
-    font-weight:normal;
-    font-style: italic;
-}
-@font-face {
-    font-family: "Roboto Slab";
-    src: url('../fonts/roboto-slab-v7-latin-regular.woff') format('woff'), 
-         url('../fonts/roboto-slab-v7-latin-regular.woff2') format('woff2');
-    font-weight: 400;
-    font-style: normal;
-}
-@font-face {
-    font-family: "champagneregular";
-    src: url('../fonts/cac_champagne-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-}
-* {
-    box-sizing: border-box;
-}
-header {
-    margin: 0;
-}
-header>div {
-    max-width: 940px;
+.header-inner {
+    width: 940px;
     height: 80px;
     margin: 0 auto;
+    padding-top: 13px;
+    display: flex;
+    justify-content: space-between;
 }
-.logo {
+.header-inner__logo-wrapper__link {
     font-family: "champagneregular";
     font-size: 40px;
     text-transform: capitalize;
     color: #fed751;
-    float: left;
-    margin-top: 32px;
-    margin-left: 5px;
+    padding-left: 5px;
+    text-decoration: none;
 }
-.logo span {
-    margin: 0;
-}
-nav {
-    margin: 0;
-}
-nav ul {
+.header-inner__nav-menu__list-links {
     list-style: none;
-    float: right;
-    margin-top: 50px;
+    padding-right: 1px;
 }
-nav ul li {
+.header-inner__nav-menu__list-links li{
     display: inline;
-    margin-left: 40px;
+    padding-left: 35px;
 }
-nav ul li a{
+.header-inner__nav-menu__list-links a{
+    letter-spacing: 0.7px;
     text-decoration: none;
     font-family: "Montserrat";
     font-weight: 600;
     text-transform: uppercase;
     color: #222222;
-    font-size: 14px;
+    font-size: 13px;
 }
-nav ul li a:hover {
+.header-inner__nav-menu__list-links a:hover {
     color: #fed751;
 }
 .services {
-    margin: 108px auto 108px;
+    padding
 }
-.services h1,p {
+.container {
+    padding: 82px 108px 104px;
+}
+.services-title h1 {
     text-align: center;
-}
-h1{
     font-family: "montserrat";
     font-weight: 700;
     font-size: 40px;
     color: #222222;
     text-transform: uppercase;
     margin: 0;
+    letter-spacing: -1px;
 }
-.services div p{
+.services-title p {
+    text-align: center;
     font-family: "droidserif";
     font-style: italic;
     font-size: 16px;
-    margin-top: 14px;
+    padding-top: 8px;
     color: #777777;
+    margin: 0;
 }
-.flexbox {
+.services__list {
     display: flex;
     justify-content: space-between;
-    max-width: 940px;
+    width: 950px;
     margin: 0 auto;
+    padding-top: 49px;
 }
-.service_item {
+.services__list__item {
     width: 290px;
     height: 232px;
     position: relative;
-    margin: 0 5px;
+    padding: 15px 5px;
 }
-.service_item img{
+.services__list__item img{
     position: absolute;
     left: 50%;
     top: 28px;
     transform: translate(-50%,0);
 }
-.service_item>.text {
+.services__list__item .item-text {
     margin-top: 107px;
 }
-.text h2{
+.item-text h3{
     text-transform: capitalize;
     color: #222222;
     font-family: "montserrat";
     font-weight: 700;
     font-size: 18px;
     text-align: center;
+    padding-top: 3px;
+    letter-spacing: -1px;
+    margin: 0;
 }
-.service_item .text p{
+.services__list__item .item-text p{
     font-family: "Roboto slab";
     font-weight: 400;
     font-size: 14px;
     color: #777777;
     text-align: center;
+    line-height: 21px;
+    margin: 0;
+    letter-spacing: -1px;
+    padding: 12px 1px;
 }
 section:last-of-type {
     background: url(../img/Map\ Image.png), #222222;

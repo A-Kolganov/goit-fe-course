@@ -9,65 +9,71 @@
     <title>Module 7</title>
 </head>
 <body>
-    <header>
-        <div>
-            <div class="logo">
-                <span>golden</span>
+    <div class="wrapper">
+        <header>
+            <div class="header-inner">
+                <div class="header-inner__logo-wrapper">
+                    <a class="header-inner__logo-wrapper__link" href="#">golden</a>
+                </div>
+                <nav class="header-inner__nav-menu">
+                    <ul class="header-inner__nav-menu__list-links">
+                        <li><a href="#">home</a></li>
+                        <li><a href="#">services</a></li>
+                        <li><a href="#">portfolio</a></li>
+                        <li><a href="#">about</a></li>
+                        <li><a href="#">contact</a></li>
+                    </ul>
+                </nav>
             </div>
-            <nav>
-                <ul>
-                    <li><a href="#">home</a></li>
-                    <li><a href="#">services</a></li>
-                    <li><a href="#">portfolio</a></li>
-                    <li><a href="#">about</a></li>
-                    <li><a href="#">contact</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
-    <section class="services">
-        <div>
-            <h1>services</h1>
-            <p>Proin iaculis purus consequat sem cure. </p>
-        </div>
-        <div class="flexbox">
-            <div class="service_item">
-                <img src="img/Icon-Basket.png" alt="icon">
-                <div class="text">
-                    <h2>e-commerce</h2>
-                    <p>Proin iaculis purus consequat sem cure digni ssim. Donec porttitora entum suscipit aenean rhoncus posuere odio in tincidunt.</p>
+        </header>
+        <section class="services">
+            <div class="container">
+                <div class="services-title">
+                    <h1>services</h1>
+                    <p>Proin iaculis purus consequat sem cure. </p>
+                </div>
+                <div class="services__list">
+                    <div class="services__list__item">
+                        <img src="img/Icon-Basket.png" alt="icon">
+                        <div class="item-text">
+                            <h3>e-commerce</h3>
+                            <p>Proin iaculis purus consequat sem cure digni ssim. Donec porttitora entum suscipit aenean rhoncus posuere odio in tincidunt.</p>
+                        </div>
+                    </div>
+                    <div class="services__list__item">
+                        <img src="img/Icon-Laptop.png" alt="icon">
+                        <div class="item-text">
+                            <h3>responsive web</h3>
+                            <p>Proin iaculis purus consequat sem cure digni ssim. Donec porttitora entum suscipit aenean rhoncus posuere odio in tincidunt.</p>
+                        </div>
+                    </div>
+                    <div class="services__list__item">
+                        <img src="img/Icon-Locked.png" alt="icon">
+                        <div class="item-text">
+                            <h3>web security</h3>
+                            <p>Proin iaculis purus consequat sem cure digni ssim. Donec porttitora entum suscipit aenean rhoncus posuere odio in tincidunt.</p>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div class="service_item">
-                <img src="img/Icon-Laptop.png" alt="icon">
-                <div class="text">
-                    <h2>responsive web</h2>
-                    <p>Proin iaculis purus consequat sem cure digni ssim. Donec porttitora entum suscipit aenean rhoncus posuere odio in tincidunt.</p>
+        </section>
+        <section>
+            <div class="container">
+                <div class="contact">
+                    <h3>contact us</h3>
+                    <p>Proin iaculis purus consequat sem cure.</p>
                 </div>
+                <form action="" method="POST" name="contact_us">
+                    <div class="flexbox">
+                        <input type="name" placeholder="name*" name="user_name" required>
+                        <input type="e-mail" name="user_e-mail"  placeholder="your e-mail*" required>
+                        <input type="text" name="topic" placeholder="subject">
+                        <textarea name="user_message" cols="30" rows="10" required placeholder="your message*"></textarea>
+                    </div>
+                        <button>send message</button>
+                </form>
             </div>
-            <div class="service_item">
-                <img src="img/Icon-Locked.png" alt="icon">
-                <div class="text">
-                    <h2>web security</h2>
-                    <p>Proin iaculis purus consequat sem cure digni ssim. Donec porttitora entum suscipit aenean rhoncus posuere odio in tincidunt.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section>
-        <div class="contact">
-            <h3>contact us</h3>
-            <p>Proin iaculis purus consequat sem cure.</p>
-        </div>
-        <form action="" method="POST" name="contact_us">
-            <div class="flexbox">
-                <input type="name" placeholder="name*" name="user_name" required>
-                <input type="e-mail" name="user_e-mail"  placeholder="your e-mail*" required>
-                <input type="text" name="topic" placeholder="subject">
-                <textarea name="user_message" cols="30" rows="10" required placeholder="your message*"></textarea>
-            </div>
-                <button>send message</button>
-        </form>
-    </section>
+        </section>
+    </div>
 </body>
 </html> 
