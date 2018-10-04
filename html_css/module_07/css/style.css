@@ -108,13 +108,14 @@
     letter-spacing: -1px;
     padding: 12px 1px;
 }
-section:last-of-type {
+.contact {
+    padding: 103px 0;
     background: url(../img/Map\ Image.png), #222222;
     margin: 0;
     background-repeat: no-repeat;
     background-position: center right;
 }
-.contact h3{
+.contact__h1-like {
     font-family: "Montserrat";
     font-weight: 700;
     font-style: normal;
@@ -122,8 +123,8 @@ section:last-of-type {
     color: #ffffff;
     text-align: center;
     text-transform: uppercase;
-    padding-top: 110px;
     margin: 0;
+    letter-spacing: -1px;
 }
 .contact p {
     font-family: "droidserif";
@@ -133,7 +134,7 @@ section:last-of-type {
     color:  #777777;
     text-align: center;
     margin: 0;
-    padding-top: 25px;
+    padding-top: 14px;
 }
 form {
     padding-top: 77px;
@@ -144,20 +145,20 @@ form {
     margin: 0 auto; 
     
 }
-form>.flexbox{
+.contact__wrapper__send-message{
     display: flex;
     justify-content: space-between;
     flex-direction: column;
     flex-wrap: wrap;
-    height: 213px;
+    height: 209px;
     align-content: space-between;
 }
 input {
-    padding: 15px;
+    padding: 13px;
     border: none;
     border-radius: 3px;
     width: 455px;
-    height: 55px;
+    height: 50px;
 }
 textarea {
     height: 213px;
@@ -173,10 +174,11 @@ textarea {
     font-weight: 700;
     color: #bbbbbb;
     text-transform: uppercase;
+    padding: 3px 6px
 }
 button {
     width: 241px;
-    height: 57px;
+    height: 64px;
     border-radius: 3px;
     border: none;
     background-color: #fed751;
