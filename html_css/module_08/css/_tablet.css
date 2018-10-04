@@ -1,0 +1,56 @@
+@media (min-width: 321px) {
+    .top-screen  {
+        background: url('../img/background_768_700.jpg');
+        width: 768px;
+        height: 700px;
+        background-position: center;
+    }
+}
+@media (min-width: 768px) {
+    .wrapper-inner {
+        padding: 25px 27px;
+    }
+    h1 {
+        margin-top: 0;
+    }
+    nav.nav {
+        padding-top: 19px;
+        padding-left: 22px;
+    }
+    h2 {
+        font-size: 52px;
+    }
+    ul {
+        padding: 0;
+    }
+    .main-screen__title {
+        padding-top: 115px;
+    }
+    .main-screen__title p{
+        font-size: 24px;
+        margin-top: 21px;
+    }
+    .main-screen__title__text {
+        padding-top: 20px;
+    }
+    .main-screen__title a{
+        letter-spacing: 0.1px;
+        font-size: 14px; 
+    }
+    h3 {
+        padding-top: 10px;
+    }
+    .users-pages__cards {
+        padding-top: 32px;
+    }
+    .users-pages__cards__card {
+        margin: 0 10px 31px;
+        padding-bottom: 0;
+    }
+    .cards-button {
+        margin-top: -5px; 
+    }
+    .cards-button button {
+        padding: 7px 27px;
+    }
+}
