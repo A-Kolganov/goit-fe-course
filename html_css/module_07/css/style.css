@@ -23,11 +23,11 @@
     list-style: none;
     padding-right: 1px;
 }
-.header-inner__nav-menu__list-links li{
+.header-inner__nav-menu__list-links li {
     display: inline;
     padding-left: 35px;
 }
-.header-inner__nav-menu__list-links a{
+.header-inner__nav-menu__list-links a {
     letter-spacing: 0.7px;
     text-decoration: none;
     font-family: "Montserrat";
@@ -38,9 +38,6 @@
 }
 .header-inner__nav-menu__list-links a:hover {
     color: #fed751;
-}
-.services {
-    padding
 }
 .container {
     padding: 82px 108px 104px;
@@ -77,7 +74,7 @@
     position: relative;
     padding: 15px 5px;
 }
-.services__list__item img{
+.services__list__item img {
     position: absolute;
     left: 50%;
     top: 28px;
@@ -86,7 +83,7 @@
 .services__list__item .item-text {
     margin-top: 107px;
 }
-.item-text h3{
+.item-text h3 {
     text-transform: capitalize;
     color: #222222;
     font-family: "montserrat";
@@ -97,7 +94,7 @@
     letter-spacing: -1px;
     margin: 0;
 }
-.services__list__item .item-text p{
+.services__list__item .item-text p {
     font-family: "Roboto slab";
     font-weight: 400;
     font-size: 14px;
@@ -145,7 +142,7 @@ form {
     margin: 0 auto; 
     
 }
-.contact__wrapper__send-message{
+.contact__wrapper__send-message {
     display: flex;
     justify-content: space-between;
     flex-direction: column;
@@ -197,6 +194,6 @@ input:invalid:focus,textarea:invalid:focus {
 input:valid:focus,textarea:valid:focus {
     outline: #00ff00 solid 2px;
 }
-input:focus,textarea:focus{
+input:focus,textarea:focus {
     outline: 0;
 }
