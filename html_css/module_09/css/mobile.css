@@ -4,7 +4,7 @@
     background-position: center center;
     min-width: 320px;
     height: 540px;
-    padding: 20px;
+    padding: 20px 0;
 }
 h1 {
     display: inline-block;
@@ -22,6 +22,11 @@ h1 a:hover {
     border: none;
     text-decoration: none;
 }
+.nav {
+    display: flex;
+    justify-content: center;
+
+}
 li a {
     font-family: "montserrat";
     font-weight: 700;
@@ -37,6 +42,7 @@ ul{
 ul li{
     padding: 0;
     list-style: none;
+    display: inline;
 }
 a:focus {
     text-decoration: none;
@@ -78,9 +84,13 @@ h2{
     border-radius: 20px;
     letter-spacing: -0.3px;
     margin-top: 2px;
+    display: block;
+}
+.users {
+    padding: 60px 0px;
 }
 .users-pages{
-    padding: 60px 0px;
+    padding-top: 12px;
 }
 h3 {
     font-family: "montserrat";
