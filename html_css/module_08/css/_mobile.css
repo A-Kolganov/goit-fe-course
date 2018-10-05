@@ -18,7 +18,9 @@
     height: 224px;
 }
 .header__nav__links-list li {
-    display: inline;
+    display: inline-block;
+    margin-right: 3px;
+    margin-left: -5px;
 }
 .header__nav__links-list .link {
     border: 2px transparent solid;
