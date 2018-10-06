@@ -1,13 +1,10 @@
-.container {
-    margin: 0 auto;
-    display: block;
-}
 .top-screen {
     background: url(../img/background_320_540.jpg);
     background-repeat: no-repeat;
     background-position: center;
     min-width: 320px;
     min-height: 540px;
+    margin: 0 auto;
 }
 .top-screen__header {
     display: flex;
@@ -75,4 +72,133 @@ p {
     background-color: #ff4e50;
     padding: 11px 50px;
     border-radius: 20px;
+}
+.content-title {
+    padding-top: 66px;
+}
+h2 {
+    font-family: "montserrat";
+    font-weight: 700;
+    font-size: 21px;
+    color: #333333;
+    padding: 0 15px;
+    text-align: center;
+}
+h3 {
+    font-family: "montserrat";
+    font-weight: 700;
+    font-size: 14px;
+    color: #333333;
+    padding: 0 15px;
+    text-align: center;
+    letter-spacing: -0.3px;
+}
+.user-info p {
+    font-family: "roboto";
+    font-weight: 400;
+    font-size: 14px;
+    color: #666666;
+    padding: 13px 42px 10px;
+    text-align: center;
+}
+.user-foto {
+    position: relative;
+    width: 121px;
+    height: 121px;
+    margin: 0 auto;
+    display: block;
+}
+.first-user-icon::after {
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: -20px;
+    right: -4px;
+    border: 5px #ffffff solid;
+    border-radius: 50%;
+    background-image: url('../img/icon/Shape\ 128.png');
+    background-color: #ff4e50;
+    background-repeat: no-repeat;
+    background-position: center center; 
+    background-size: 17px;
+    width: 40px;
+    height: 40px;
+}
+.second-user-icon::after {
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: -20px;
+    right: -4px;
+    border: 5px #ffffff solid;
+    border-radius: 50%;
+    background-image: url('../img/icon/Shape\ 155.png');
+    background-color: #ffa507;
+    background-repeat: no-repeat;
+    background-position: center center; 
+    background-size: 17px;
+    width: 40px;
+    height: 40px;
+}
+.third-user-icon::after {
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: -20px;
+    right: -4px;
+    border: 5px #ffffff solid;
+    border-radius: 50%;
+    background-image: url('../img/icon/Shape\ 153.png');
+    background-color: #1cd7ad;
+    background-repeat: no-repeat;
+    background-position: center center; 
+    background-size: 17px;
+    width: 40px;
+    height: 40px;
+}
+.fourth-user-icon::after {
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: -20px;
+    right: -4px;
+    border: 5px #ffffff solid;
+    border-radius: 50%;
+    background-image: url('../img/icon/Shape\ 170.png');
+    background-color: #4e73db;
+    background-repeat: no-repeat;
+    background-position: center center; 
+    background-size: 17px;
+    width: 40px;
+    height: 40px;
+}
+.user-foto {
+    padding-top: 17px;
+}
+.user-name {
+    padding-top: 33px;
+
+}
+.content__users-pages {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.button-c-content {
+    padding: 16px 0;
+}
+.button-c-content--red{
+    font-family: "montserrat";
+    font-weight: 700;
+    font-size: 14px;
+    color: #ff4e50;
+    padding: 9px 71px;
+    text-align: center;
+    background-color: transparent;
+    border: #ff4e50 2px solid;
+    border-radius: 20px;
+    cursor: pointer;
+    display: block;
+    margin: 0 auto;
+    letter-spacing: -0.3px;
 }

@@ -1,14 +1,12 @@
 @media (min-width: 321px) {
     .top-screen  {
         background: url('../img/background_768_700.jpg');
-        width: 768px;
-        height: 700px;
+        max-width: 768px;
+        max-height: 700px;
         background-position: center;
     }
 }
 @media (min-width: 768px) {
-    .top-screen  {
-    }
     .top-screen__header {
         flex-direction: row;
         padding: 14px 46px 0;
@@ -21,11 +19,44 @@
         margin: 0;
     }
     .top-screen__title__heading {
-        padding-top: 100px;
+        padding-top: 115px;
     }
     h1 {
-        font-size: 52px;
+        font-size: 51px;
         line-height: 63px;
-        letter-spacing: 1px
+        padding: 0 100px;
+    }
+    .top-screen__title__text {
+        padding-top: 16px;
+    }
+    .top-screen__title__text p{
+        font-size: 23px;
+        letter-spacing: 0.5px;
+    }
+    .top-screen__title__link-to-content {
+        padding-top: 36px;
+    }
+    .top-screen__title__link-to-content a{
+        padding: 12px 21px;
+    }
+    .content__users-pages {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        height: 550px;
+        align-items: center;
+        align-content: center;
+    }
+    .content__users-pages__user {
+        width: 258px;
+        padding-top: 18px;
+        padding-bottom: 2px;
+    }
+    .user-info p {
+        padding: 16px 20px;
+    }
+    .button-c-content--red {
+        padding: 9px 28px;
     }
 }

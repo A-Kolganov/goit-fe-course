@@ -1,38 +1,25 @@
 
 @media (min-width: 769px) {
-    .wrapper-inner {
-        background: url(../img/background_1440x700.jpg);
-        width: 100%;
-        max-width: 1600px;
-        height: 100vh;
-        max-height: 700px;
+    .top-screen   {
+        background: url('../img/background_1440x700.jpg');
+        max-width: 1440px;
+        height: 700px;
         background-position: center;
-        background: cover;
     }
 }
-/* Making for laptop 1024 */
-
-@media (min-width: 992px) {
-    .wrapper-inner {
-        width: 100%;
-        min-width: 942px;
-        max-width: 1440px;
-        height: 100vh;
-        max-height: 700px;
+@media (min-width: 1024px) {
+    .content-container {
+        width: 960px;
+        margin: 0 auto;
     }
-    .header>div {
-        padding: 0;
+    .top-screen__header {
+        padding: 57px 7px;
     }
-    .header h1 a{
-        margin-right: 13px;
+    .top-screen__title__heading {
+        padding-top: 99px;
     }
-    .nav ul {
-        margin-left: -5px;
-    }
-    .users-pages__cards__card {
-        margin: 0;
-    }
-    .cards-button {
-        padding-top: 30px;
+    .top-screen__title__heading h1{
+        padding: 0 425px;
+        text-align: center;
     }
 }
