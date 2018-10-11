@@ -23,6 +23,9 @@ html {
 body {
   margin: 0;
 }
+* {
+  box-sizing: border-box;
+}
 
 /**
  * Correct the font size and margin on `h1` elements within `section` and
