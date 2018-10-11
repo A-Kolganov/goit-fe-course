@@ -1,0 +1,12 @@
+.page-title {
+    background-image: url('../img/background/background_1920x1000@x1-min.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    min-width: 1200px;
+    height: 1000px;
+}
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    .page-title {
+        background: url('../img/background/background_1920x1000@x2-min.jpg');
+    }
+}
