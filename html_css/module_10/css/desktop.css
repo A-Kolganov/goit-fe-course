@@ -168,6 +168,7 @@ h4::first-letter {
     margin: 0 auto;
     text-align: center;
     width: 1050px;
+    
 }
 .card__name {
     font-family: "Montserrat";
@@ -176,6 +177,8 @@ h4::first-letter {
     color: #333333;
     text-align: center;
     text-transform: uppercase;
+    padding-top: 26px;
+    margin: 0;
 }
 .card__worker {
     font-family: "Roboto";
@@ -184,15 +187,72 @@ h4::first-letter {
     color: #999999;
     text-align: center;
     text-transform: uppercase;
+    letter-spacing: -1px;
 }
 .social-svg {
     fill: #f38181;
+    width: 60px;
+    height: 60px;
+    background-color: #fce38a;
+    border: 0 ;
+    padding: 10px;
 }
-.card__foto--effects {
+.card__foto--effects{
+    display: block;
     position: relative;
     width: 380px;
     height: 470px;
+    transition-duration: 1s;
+    transition-property: transform, box-shadow;
+}
+.card__foto--effects:hover {
+    transform: translate( -10px, -10px);
+    transition-duration: 1s;
+    transition-property: transform, box-shadow;
+    box-shadow: 10px 10px  #95e1d3;
 }
 .icons-hover {
-    display: absolute;
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    list-style: none;
+    padding: 0;
 }
+.social-svg:hover {
+    display: block;
+    fill: #ffffff;
+    background-color: #f38181;
+}
+.card__foto__icons:hover {
+    background-image: linear-gradient(to bottom, rgba(243,129,129,0.9), rgba(252,227,138,0.9));
+    width: 380px;
+    height: 470px;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.card__foto__icons {
+    width: 380px;
+    height: 470px;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.icons-hover-item {
+    display: none;
+}
+.card__foto__icons:hover .icons-hover-item {
+    display: block;
+}
+.team__members {
+    display: flex;
+    justify-content: space-around;
+    width: 1228px;
+    margin: 0 auto;
+    padding-top: 80px;
+}
+
+
