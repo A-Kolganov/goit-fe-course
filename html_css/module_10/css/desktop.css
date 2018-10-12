@@ -1,12 +1,12 @@
 .page-title {
-    background-image: linear-gradient(to bottom, rgba(243,129,129,0.9), rgba(252,227,138,0.9)), url('../img/background/background_1920x1000@1x-min.jpg') ;
+    background-image: linear-gradient(to bottom, rgba(243,129,129,0.9), rgba(252,227,138,0.9)), url('../img/background/background_1920x1000@x1-min.jpg') ;
     background-repeat: no-repeat;
     background-position: center;
     width: 100%;
     height: 1000px;
     background-size: cover;
 }
-@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+@media (min-resolution: 2dppx), (min-resolution: 192dpi) {
     .page-title {
     background-image: linear-gradient(to bottom, rgba(243,129,129,0.9), rgba(252,227,138,0.9)), url('../img/background/background_1920x1000@2x-min.jpg') ;
     background-repeat: no-repeat;
@@ -90,10 +90,10 @@
     border: 3px #ffffff solid;
     padding: 8px 27px;
 }
-.services__title {
-    padding: 41px 10px;
+.services__title, .team__title {
+    padding: 23px 10px 0px;
 }
-.services__title h4{
+.services__title h4, .team__title h4{
     font-family: "Kaushan Script";
     color: #333333;
     font-size: 24px;
@@ -104,7 +104,10 @@
 h4::first-letter {
     text-transform: uppercase;
 }
-.services__title h3{
+.services {
+    padding-top: 22px;
+}
+.services__title h3, .team__title h3{
     font-family: "Montserrat";
     font-size: 30px;
     font-weight: 900;
@@ -112,14 +115,84 @@ h4::first-letter {
     text-transform: uppercase;
     text-align: center;
     margin: 0;
-    padding-top: 18px;
     letter-spacing: -0.3px;
+    padding-top: 15px;
 }
-.services__title h3::after {
+.services__title h3::after, .team__title h3::after {
     content: " ";
     display: block;
     width: 60px;
     height: 3px;
     background-color: #f38181;
     margin: 34px auto;
+}
+.services__cards {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    width: 1200px;
+    margin: 0 auto;
+}
+.services__card {
+    display: flex;
+    justify-content: center;
+    padding: 27px 5px 65px;
+    width: 340px;
+}
+.services__card__svg{
+    width: 32px;
+    height: 32px;
+}
+.card__heading {
+    font-family: "Montserrat";
+    font-size:  14px;
+    color: #333333;
+    text-transform: uppercase;
+    margin: 0;
+    padding: 3px 20px;
+}
+.card__text, .team__text {
+    font-family: "Roboto";
+    font-size: 15px;
+    font-weight: 500;
+    color: #999999;
+    padding: 13px 0 0 23px;
+    margin: 0;
+    line-height: 21px;
+}
+.services__card__svg-wrapper {
+    padding-top: 7px;
+}
+.team__text {
+    padding: 13px 32px;
+    margin: 0 auto;
+    text-align: center;
+    width: 1050px;
+}
+.card__name {
+    font-family: "Montserrat";
+    font-size: 14px;
+    font-weight: 800;
+    color: #333333;
+    text-align: center;
+    text-transform: uppercase;
+}
+.card__worker {
+    font-family: "Roboto";
+    font-style: italic;
+    font-size: 14px;
+    color: #999999;
+    text-align: center;
+    text-transform: uppercase;
+}
+.social-svg {
+    fill: #f38181;
+}
+.card__foto--effects {
+    position: relative;
+    width: 380px;
+    height: 470px;
+}
+.icons-hover {
+    display: absolute;
 }
