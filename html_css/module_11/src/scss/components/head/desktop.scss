@@ -1,34 +1,23 @@
 .banner {
-    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(243,129,129,0.9)), to(rgba(252,227,138,0.9))), url('../img/background/background_1920x1000@x1-min.jpg') ;
-    background-image: -webkit-linear-gradient(top, rgba(243,129,129,0.9), rgba(252,227,138,0.9)), url('../img/background/background_1920x1000@x1-min.jpg') ;
-    background-image: -o-linear-gradient(top, rgba(243,129,129,0.9), rgba(252,227,138,0.9)), url('../img/background/background_1920x1000@x1-min.jpg') ;
-    background-image: linear-gradient(to bottom, rgba(243,129,129,0.9), rgba(252,227,138,0.9)), url('../img/background/background_1920x1000@x1-min.jpg') ;
+    background: linear-gradient(to bottom, rgba(243,129,129,0.9), rgba(252,227,138,0.9)), url('../../../img/background/background_1920x1000@x1-min.jpg');
     background-repeat: no-repeat;
     background-position: center;
     width: 100%;
     height: 1000px;
     background-size: cover;
-}
-@media (-webkit-min-device-pixel-ratio: 2), (-o-min-device-pixel-ratio: 2/1), (min-resolution: 2dppx), (min-resolution: 192dpi) {
-    .page-title {
-    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(243,129,129,0.9)), to(rgba(252,227,138,0.9))), url('../img/background/background_1920x1000@2x-min.jpg') ;
-    background-image: -webkit-linear-gradient(top, rgba(243,129,129,0.9), rgba(252,227,138,0.9)), url('../img/background/background_1920x1000@2x-min.jpg') ;
-    background-image: -o-linear-gradient(top, rgba(243,129,129,0.9), rgba(252,227,138,0.9)), url('../img/background/background_1920x1000@2x-min.jpg') ;
-    background-image: linear-gradient(to bottom, rgba(243,129,129,0.9), rgba(252,227,138,0.9)), url('../img/background/background_1920x1000@2x-min.jpg') ;
-    background-repeat: no-repeat;
-    background-position: center;
-    width: 100%;
-    height: 1000px;
-    background-size: cover;
+
+    @media (-webkit-min-device-pixel-ratio: 2), (-o-min-device-pixel-ratio: 2/1), (min-resolution: 2dppx), (min-resolution: 192dpi) {
+        background-image: linear-gradient(to bottom, rgba(243,129,129,0.9), rgba(252,227,138,0.9)), url('../../../img/background/background_1920x1000@x2-min.jpg');
+        background-repeat: no-repeat;
+        background-position: center;
+        width: 100%;
+        height: 1000px;
+        background-size: cover;
     }
 }
-.page-header{
-    display: -webkit-box;
-    display: -ms-flexbox;
+.header{
     display: flex;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
+    justify-content: space-between;
     margin: 0 auto;
     width: 1220px;
     padding: 19px 9px;
@@ -40,7 +29,7 @@
     color: #ffffff;
     text-decoration: none;
 }
-.nav__links {
+.links-list {
     list-style: none;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -49,18 +38,16 @@
         -ms-flex-pack: justify;
             justify-content: space-between;
 }
-.nav__links li {
+.links-list__item {
     padding-left: 52px;
 }
-.nav__links__menu-link {
+.links-list__item__link {
     font-family: "Montserrat";
     font-weight: normal;
     font-size: 14px;
     color: #ffffff;
     text-transform: uppercase;
     text-decoration: none;
-
-    padding-bottom: 
 }
 .nav__links__menu-link:hover {
     color: #fce38a;
