@@ -1,0 +1,16 @@
+/*
+   Import partials below
+*/
+@import 'normalize';
+
+@mixin main-padding($x) {
+  padding: ($x / 20);
+}
+
+body {
+  h1 {
+    font-size: larger;
+
+    @include main-padding(100%);
+  }
+}
