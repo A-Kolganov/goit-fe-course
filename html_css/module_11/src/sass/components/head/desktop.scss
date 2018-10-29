@@ -1,0 +1,93 @@
+.banner {
+    background: linear-gradient(to bottom, rgba(243,129,129,0.9), rgba(252,227,138,0.9)), url('../../../img/background/background_1920x1000@x1-min.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100%;
+    height: 1000px;
+    background-size: cover;
+
+    @media (-webkit-min-device-pixel-ratio: 2), (-o-min-device-pixel-ratio: 2/1), (min-resolution: 2dppx), (min-resolution: 192dpi) {
+        background-image: linear-gradient(to bottom, rgba(243,129,129,0.9), rgba(252,227,138,0.9)), url('../../../img/background/background_1920x1000@x2-min.jpg');
+        background-repeat: no-repeat;
+        background-position: center;
+        width: 100%;
+        height: 1000px;
+        background-size: cover;
+    }
+}
+.header{
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    width: 1220px;
+    padding: 19px 9px;
+}
+.logo-link {
+    font-family: "Montserrat";
+    font-weight: bold;
+    font-size: 30px;
+    color: #ffffff;
+    text-decoration: none;
+}
+.links-list {
+    list-style: none;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+}
+.links-list__item {
+    padding-left: 52px;
+}
+.links-list__item__link {
+    font-family: "Montserrat";
+    font-weight: normal;
+    font-size: 14px;
+    color: #ffffff;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+.nav__links__menu-link:hover {
+    color: #fce38a;
+    border-bottom: 3px solid #fce38a;
+    padding-bottom: 8px;
+}
+.title {
+    padding: 127px 10px 120px;
+}
+.title__h2 {
+    font-family: "Kaushan Script";
+    color: #ffffff;
+    font-size: 72px;
+    text-align: center;
+    font-weight: 800;
+    margin: 0;
+}
+.title__h1 {
+    font-family: "Montserrat";
+    color: #ffffff;
+    font-size: 150px;
+    font-weight: bold;
+    text-align: center;
+    margin: 0 auto;
+    padding-top: 36px;
+    width: 850px;
+    text-transform: uppercase;
+    line-height: 141px;
+    letter-spacing: -5px;
+}
+.title__link {
+    text-align: center;
+}
+.title__link--to-content {
+    text-decoration: none;
+    color: #ffffff;
+    text-transform: uppercase;
+    font-family: "Montserrat";
+    font-size: 14px;
+    cursor: pointer;
+    border: 3px #ffffff solid;
+    padding: 8px 27px;
+}
