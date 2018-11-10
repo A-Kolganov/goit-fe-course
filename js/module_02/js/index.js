@@ -1,21 +1,21 @@
 'use strict';
 
-const inputNumbers = [ ];
-let writeNum ;
-let total = 0 ;
+const numbers = [ ];
+let userInput;
+let total = +0 ;
 
 do{
-    writeNum = Number.parseInt(prompt ("Введите числа"));
-    if (Number.isNaN (writeNum)) {
+    userInput = parseInt(prompt ("Введите числа"));
+    if (isNaN (userInput)) {        
     break;
-    } inputNumbers.push (writeNum);
-} while( !Number.isNaN (writeNum) );
+    } numbers.push (userInput);
+} while( !isNaN (userInput) );
 
-for ( let inputNumber of inputNumbers){
-    total = total + inputNumber;
+for ( let a of numbers){
+    total = +total + +a;
 }
 
 alert (`Общая сумма чисел равна ${total}`);
 
 
-console.log(inputNumbers);
+console.log(numbers);
