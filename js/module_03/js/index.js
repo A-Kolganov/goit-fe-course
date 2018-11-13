@@ -29,5 +29,8 @@ const addLogin = function(login) {
 };
 
 const login = prompt('Введите новый логин (от 4 до 16-ти символов)');
+if (login === null) {
+    alert('Отменено пользователем!');
+} else {
 addLogin(login);
-
+}
