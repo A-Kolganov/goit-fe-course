@@ -2,34 +2,32 @@
 
 const logins = ["Mango", "robotGoogles", "Poly", "Aj4x1sBozz", "qwerty123"];
 
-
-
 const isLoginValid = function(login) {
-    return newLogin.length >= 4 && newLogin.length <= 16
+    if (login.length >= 4 && login.length <= 16){
+        return true;
+    } else {
+        alert ('Ошибка! Логин должен быть от 4 до 16 символов');
+    }
 };
 
-const isLoginUnique = function(allLogins, login) {
+const isLoginUnique = function(logins, login) {
     for ( a of logins) {
-        if ( a === newLogin) {
-            return a === newLogin;
-        }
+        if ( a === login) {
+            return true
+        } 
     }
 };
 
 const addLogin = function(login) {
-       logins.push (newLogin);  
+    if (isLoginValid (login) === true && isLoginUnique (logins, login) !== true){
+       logins.push (login);  
        alert('Логин успешно добавлен!');
+    } else {
+        alert ('Такой логин уже используется!');
+    }
+
 };
 
-const newLogin = prompt('Введите новый логин (от 4 до 16-ти символов)');
-if  (newLogin === null) {
-    alert('Отменено пользователем!');
-} else if (isLoginValid (newLogin) === true) { 
-    if (isLoginUnique (newLogin) === true) {
-        alert ('Такой логин уже используется!');
-    } else {
-        addLogin(newLogin);
-    }
-} else {
-    alert ('Ошибка! Логин должен быть от 4 до 16 символов');
-}
+const login = prompt('Введите новый логин (от 4 до 16-ти символов)');
+addLogin(login);
+
