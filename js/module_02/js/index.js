@@ -2,20 +2,21 @@
 
 const numbers = [ ];
 let userInput;
-let total = +0 ;
+let total = 0 ;
 
-do{
-    userInput = parseInt(prompt ("Введите числа"));
-    if (isNaN (userInput)) {        
-    break;
-    } numbers.push (userInput);
-} while( !isNaN (userInput) );
-
-for ( let a of numbers){
-    total = +total + +a;
-}
-
-alert (`Общая сумма чисел равна ${total}`);
-
-
-console.log(numbers);
+do {
+    userInput = prompt('Введите число');
+    
+    if (!Number.isNaN(+userInput) && userInput !== null) {
+      numbers.push(+userInput);
+    } else if (userInput !== null) {
+      alert('Не число');
+    }
+  } while (userInput !== null);
+  
+  if(numbers.length > 0) {
+    for(const value of numbers) {
+      total += value;
+    }
+    alert(`Общая сумма чисел ${total}`);
+  }
