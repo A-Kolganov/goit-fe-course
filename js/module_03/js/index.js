@@ -22,7 +22,7 @@ const addLogin = function(login) {
     if (isLoginValid (login) === true && isLoginUnique (logins, login) !== true){
        logins.push (login);  
        alert('Логин успешно добавлен!');
-    } else {
+    } else if (isLoginValid (login) === true && isLoginUnique (logins, login) === true){
         alert ('Такой логин уже используется!');
     }
 
