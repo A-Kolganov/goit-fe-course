@@ -1,6 +1,10 @@
 'use scrict';
 
 const logins = ["Mango", "robotGoogles", "Poly", "Aj4x1sBozz", "qwerty123"];
+const addLoginSucces = 'Логин успешно добавлен!';
+const enabledLogin = 'Такой логин уже используется!';
+const incorrectLogin = 'Ошибка! Логин должен быть от 4 до 16 символов';
+const canceledByUser = 'Отменено пользователем!';
 
 const isLoginValid = (login) => {
     return login.length >= 4 && login.length <= 16
@@ -18,49 +22,20 @@ const addLogin = (logins,login) => {
         if (isLoginValid (login)){
             if (isLoginUnique (logins, login)){
                 logins.push (login);  
-                alert('Логин успешно добавлен!');
-            } else {
-                alert ('Такой логин уже используется!');
+                return addLoginSucces;
+            }{
+                return enabledLogin ;
             }
-        } else {
-            alert ('Ошибка! Логин должен быть от 4 до 16 символов')
+        }{
+            return incorrectLogin;
         }
-    } else {
-        alert('Отменено пользователем!');
+    }{
+        return canceledByUser;
     }
 }
 
 const login = prompt('Введите новый логин (от 4 до 16-ти символов)');
-addLogin(logins,login);
+alert (addLogin(logins,login));
 
 
 
-
-// const isLoginValid = function(login) {
-//     if (login.length >= 4 && login.length <= 16){
-//         return true;
-//     } else {
-//         alert ('Ошибка! Логин должен быть от 4 до 16 символов');
-//     }
-// };
-
-// const isLoginUnique = function(logins, login) {
-//     return logins.includes(login);
-// };
-
-// const addLogin = function(login) {
-//     if (isLoginValid (login) === true && isLoginUnique (logins, login) !== true){
-//        logins.push (login);  
-//        alert('Логин успешно добавлен!');
-//     } else if (isLoginUnique (logins, login) === true){
-//         alert ('Такой логин уже используется!');
-//     }
-
-// };
-
-// const login = prompt('Введите новый логин (от 4 до 16-ти символов)');
-// if (login === null) {
-//     alert('Отменено пользователем!');
-// } else {
-// addLogin(login);
-// }
