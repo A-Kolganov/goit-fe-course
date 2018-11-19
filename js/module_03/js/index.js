@@ -15,8 +15,8 @@ const isLoginUnique = (logins, login) => {
 
 const addLogin = (logins,login) => {
     if (login !== null) {
-        if (isLoginValid (login) === true){
-            if (isLoginUnique (logins, login) === true){
+        if (isLoginValid (login)){
+            if (isLoginUnique (logins, login)){
                 logins.push (login);  
                 alert('Логин успешно добавлен!');
             } else {
