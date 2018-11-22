@@ -35,7 +35,7 @@ const addLogin = (logins,login) => {
 }
 
 const login = prompt('Введите новый логин (от 4 до 16-ти символов)');
-alert (addLogin(logins,login));
+addLogin(logins,login);
 
 
 
