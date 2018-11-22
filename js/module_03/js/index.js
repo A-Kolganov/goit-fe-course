@@ -1,4 +1,4 @@
-'use scrict';
+'use strict';
 
 const logins = ["Mango", "robotGoogles", "Poly", "Aj4x1sBozz", "qwerty123"];
 const addLoginSucces = 'Логин успешно добавлен!';
