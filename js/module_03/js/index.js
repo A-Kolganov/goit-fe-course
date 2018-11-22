@@ -10,17 +10,12 @@ const isLoginValid = (login) => {
     return login.length >= 4 && login.length <= 16
 }
 const isLoginUnique = (logins, login) => {
-    if (logins.includes(login)){
-        return false;
-    } {
-        return true;
-    }
-}
+    return logins.includes(login) }
 
 const addLogin = (logins,login) => {
     if (login !== null) {
         if (isLoginValid (login)){
-            if (isLoginUnique (logins, login)){
+            if (!isLoginUnique (logins, login)){
                 logins.push (login);  
                 return addLoginSucces;
             }{
@@ -35,7 +30,8 @@ const addLogin = (logins,login) => {
 }
 
 const login = prompt('Введите новый логин (от 4 до 16-ти символов)');
-addLogin(logins,login);
+addLogin(logins,login)
+
 
 
 
