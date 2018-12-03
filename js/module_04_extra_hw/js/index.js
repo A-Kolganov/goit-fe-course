@@ -1,8 +1,8 @@
 'use strict';
 
-// // task 1
+//  TASK 1
 
-// /*  
+//   
 //   Напишите скрипт, который, для объекта user, последовательно: 
   
 //     - добавляет поле mood со значением 'happy'
@@ -19,33 +19,63 @@
     
 //     - выводит содержимое объекта user в формате ключ:значение 
 //       используя Object.entries и for...of
-// */
+// 
 
-const user = {
-    name: "Mango",
-    age: 20,
-    hobby: "html",
-    premium: true
-  };
+// const user = {
+//     name: "Mango",
+//     age: 20,
+//     hobby: "html",
+//     premium: true
+//   };
 
+// function scriptForUser (user) {
+//   const key = 'mood';
+//   user[key] = 'happy';
+//   user.hobby = 'javascript';
+//   delete user.premium;
+//   for (const key in user){
+//     console.log(key, user[key]); 
+//   }
+//   const keys = Object.keys(user) 
+//   for (const key of keys) {
+//     console.log(key, user[key])
+//   }
+//   const entries = Object.entries(user)
+//   for (const entry of entries){
+//     const key = entry[0];
+//     const value = entry[1];
+//     console.log(`${key}: ${value}`);
+//   }
+
+// }
+
+// scriptForUser(user);
 
   
-// //   task 2
+// //   TASK 2
 
-// /*
+// 
 //   Напиште скрипт который определит и выведет в консоль 
 //   имя сотрудника который выполнил больше всех задач.
 
 //   Сотрудники и кол-во выполненых задач содержатся 
 //   как свойства объекта в формате "имя":"кол-во задач"
-// */
+// 
 
-// const tasksCompleted = {
-//     ann: 29,
-//     david: 35,
-//     helen: 1,
-//     lorence: 99
-//   };
+const tasksCompleted = {
+    ann: 29,
+    david: 35,
+    helen: 1,
+    lorence: 99
+  };
+
+function findBestWorker () {
+  const values = Object.values(tasksCompleted)
+    console.log(Math.max([values1,[values2,[ ...,]]]))
+  
+  
+}
+findBestWorker(tasksCompleted)
 
 
 // //   task 3
