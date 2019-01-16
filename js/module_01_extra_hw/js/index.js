@@ -168,7 +168,7 @@
 // const sayIt = prompt('Введите произвольное целое число');
 
 // if ( sayIt !== null) {
-//     if (Number(sayIt) === NaN) {
+//     if (Number.isNaN(sayIt) === true) {
 //         alert(incorrect)
 //     } else {alert(thanks)}
 // } else {alert('Приходите еще!')}
@@ -185,8 +185,99 @@
   PS: попробуйте использовать тернарный оператор
 */
 
-const num = Number.parseInt(Math.random() * 100);
+// const num = Number.parseInt(Math.random() * 100);
 
-let type;
+// let type;
+// if (num % 2 == 0) {
+//    type = 'even' ;
+// } else {
+//   type = "odd";
+// }
 
-console.log(`${num} is ${type}`);
+// console.log(`${num} is ${type}`);
+
+//task 9
+
+/* 
+  Время состоит из: 
+    часов(hours)
+    минут (minutes)
+    секунд(seconds).
+  
+  Время должно всегда выводиться в формате xx:xx:xx
+  Например: 01:12:04 или 14:03:45
+  
+  Составляющие времени не гарантированно состоят из 2-х цифр!
+  
+  Напишите скрипт который проверяет каждую составляющую,
+  тоесть значения переменных hours, minutes, seconds 
+  и добавлят впереди 0 если необходимо.
+*/
+
+// let hours = 7;
+// let minutes = 3;
+// let seconds = 42;
+
+// if (hours < 10) {
+//   hours = '0' + hours;
+// }
+// if (minutes < 10) {
+//   minutes = '0' + minutes;
+// }
+
+// const time = `${hours}:${minutes}:${seconds}`;
+
+// console.log('Time is: ', time);
+
+//task 10
+
+/* 
+  Создайте срипт поиска отелей, где пользователь 
+  с помощью prompt должен ввести число от 1 до 5
+  
+  Проверить что пользователь ввел именно цифру от 1 до 5
+  
+  Если пользователь нажал Cancel, то вывести 
+  alert с текстом 'очень жаль, приходите еще!'
+  
+  Если было введено что либо кроме чисел 1-5, 
+  вывести alert с текстом 'Неверный ввод, возможные варианты 1-5!'
+  
+  Если же пользовател ввел валидное число, 
+  в зависимости от числа, используя switch, 
+  вывести alert с одной из строк:
+*/  
+//   let one = "Каталог хостелов" 
+//   let two = "Каталог бюджетных отелей"
+//   let three = "Каталог отелей ***"
+//   let four = "Каталог отелей ****"
+//   let five = "Каталог лучших отелей"
+
+
+// const num = prompt("Введити число от 0 до 5");
+
+// if ( num !== null) {
+//   if ( num > 0 && num <= 5) {
+//     switch (num) {
+//       case '1':
+//       alert(one)
+//       break;
+//       case '2':
+//       alert(two)
+//       break;
+//       case '3':
+//       alert(three)
+//       break;
+//       case '4':
+//       alert(four)
+//       break;
+//       case '5':
+//       alert(five)
+//       break;
+//     }
+//   } else {
+//     alert('Неверный ввод, возможные варианты 1-5!');
+//   }
+// } else {
+//   alert('очень жаль, приходите еще!');
+// }
