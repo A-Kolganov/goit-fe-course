@@ -9,7 +9,15 @@
 //   строку "Even" если число четное и строку "Odd" если не четное.
 // */
 
-// // Вызовы функции для проверки
+// Вызовы функции для проверки
+// function checkNumberType (n){
+//     if (n % 2 == 0) {
+//         return "even"
+//     } else {
+//         return "odd"
+//     }
+// }
+
 // console.log( checkNumberType(2) ); // 'Even'
 
 // console.log( checkNumberType(46) ); // 'Even'
@@ -31,7 +39,18 @@
 //     возвращает укороченную версию.
 // */
 
-// // Вызовы функции для проверки
+// Вызовы функции для проверки
+// let arr =[];
+
+
+// function formatString (i){
+//     arr.push(i);
+//     arr.split('');
+//     console.log(arr)
+//     if( arr.split.length < 40 ) {
+//         return i; 
+//     }
+// }
 // console.log(
 //     formatString("Curabitur ligula sapien, tincidunt non.")
 //   ); // вернется оригинальная строка
@@ -63,6 +82,18 @@
 //   PS: слова могут быть в произвольном регистре
 // */
 
+
+
+// function checkForSpam(i){
+//     i = i.toLowerCase()
+//     let word = i.split(' ');
+//     if(word.includes("sale")){
+//         return true
+//     }
+//     if(word.includes("spam")){
+//         return true
+//     }
+// }
 // // Вызовы функции для проверки
 // console.log( checkForSpam('Latest technology news') ); // false
 
@@ -72,7 +103,7 @@
 
 // console.log( checkForSpam('[SPAM] How to earn fast money?') ); // true
 
-// //task 4
+// // //task 4
 
 // /*  
 //   Написать функцию, getPx(str) 
@@ -85,6 +116,16 @@
 // */
 
 // // Вызовы функции для проверки
+
+// function getPx(str){
+    
+//     if (typeof(str) === 'string'){
+//         return Number.parseFloat(str);
+//     }else{
+//         return null;
+//     }
+// }
+
 // console.log( getPx("10px") === 10 ); // должно быть:  true
 // console.log( getPx("10.5") === 10.5 ); // должно быть:  true
 // console.log( getPx("0") === 0 ); // должно быть:  true
@@ -104,18 +145,23 @@
 // */
 
 
+// function findLongestWord(string){
+//     var longestWord =" " ;
+//     let arr = string.split(" ");
+//     for ( const value of arr) {
+//         if (value.length > longestWord.length) {
+//           var longestWord = value;
+//         } }
+//         return longestWord;
+// }
+
+
 // // Вызовы функции для проверки
-// console.log(
-//     findLongestWord("The quick brown fox jumped over the lazy dog")
-//   ); // вернет 'jumped'
+// console.log(findLongestWord("The quick brown fox jumped over the lazy dog")); // вернет 'jumped'
   
-//   console.log(
-//     findLongestWord("Google do a roll")
-//   ); // вернет 'Google'
+// console.log(findLongestWord("Google do a roll")); // вернет 'Google'
   
-//   console.log(
-//     findLongestWord("May the force be with you")
-//   ); // вернет 'force'
+// console.log(findLongestWord("May the force be with you")); // вернет 'force'
 
   
 //   //task 6 
@@ -126,18 +172,29 @@
 //   самое большое число в массиве.
 // */
 
-// // Вызовы функции для проверки
-// console.log(
-//     findLargestNumber([1, 2, 3])
-//   ); // вернет 3
+function findLargestNumber(string){
+    var bigNumber = 0 ;
+    const arr =[]
+    arr.push(string.split(","));
+    for ( const value of arr) {
+        if (Number(value) > bigNumber) {
+          var bigNumber = value;
+        } }
+        return bigNumber;
+}
+
+// Вызовы функции для проверки
+console.log(
+    findLargestNumber([1, 2, 3])
+  ); // вернет 3
   
-//   console.log(
-//     findLargestNumber([27, 12, 18, 5])
-//   ); // вернет 27
+  console.log(
+    findLargestNumber([27, 12, 18, 5])
+  ); // вернет 27
   
-//   console.log(
-//     findLargestNumber([31, 128, 14, 74])
-//   ); // вернет 128
+  console.log(
+    findLargestNumber([31, 128, 14, 74])
+  ); // вернет 128
 
   
 //   //task 7 
