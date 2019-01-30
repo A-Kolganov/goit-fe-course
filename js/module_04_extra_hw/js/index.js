@@ -62,21 +62,28 @@
 //   как свойства объекта в формате "имя":"кол-во задач"
 // 
 
-const tasksCompleted = {
-    ann: 29,
-    david: 35,
-    helen: 1,
-    lorence: 99
-  };
+// const tasksCompleted = {
+//     ann: 29,
+//     david: 35,
+//     helen: 1,
+//     lorence: 99
+//   };
 
-function findBestWorker () {
-  const values = Object.values(tasksCompleted)
-    console.log(Math.max([values1,[values2,[ ...,]]]))
-  
-  
-}
-findBestWorker(tasksCompleted)
+//   const findBest = (ob) => {
+//       let bestWork = 0;
+//       let bestWorker = '';
+//      const keys = Object.keys(ob);
 
+//      for(let key of keys){
+//        if (Number(ob[key]) > bestWork){
+//          bestWork = Number(ob[key]);
+//          bestWorker = key;
+//        }
+//      }
+//      return console.log( `${bestWorker}: ${bestWork}`)
+//   }
+
+//   findBest(tasksCompleted);
 
 // //   task 3
 
@@ -85,6 +92,16 @@ findBestWorker(tasksCompleted)
 //   считающую кол-во свойств в объекте.
 //   Функция возвращает количество свойств.
 // */
+
+// const countProps = (obj) =>{
+//   let properties = 0;
+//   const keys = Object.keys(obj);
+//   for( let key in keys) {
+//     properties += 1;
+//   }
+//   return properties;
+// }
+
 
 // // Вызовы функции для проверки
 // console.log(
@@ -104,9 +121,17 @@ findBestWorker(tasksCompleted)
 //   Возвращает true если объект пустой, false если не пустой.
 // */
 
+// const isObjectEmpty=(obj)=>{
+//   const properties = Object.keys(obj);
+//   if (properties != 0){
+//     return true
+//   };
+//   return false;
+// }
+
 // // Вызовы функции для проверки
 // console.log(
-//     isObjectEmpty({})
+//     isObjectEmpty({ })
 //   ); // true
   
 //   console.log(
@@ -128,6 +153,15 @@ findBestWorker(tasksCompleted)
   
 //   Функция возвращает общую сумму зарплаты.
 // */
+
+// const countTotalSalary=(obj)=>{
+//   const values = Object.values(obj);
+//   let total = 0;
+//   for (let i of values){
+//     total += i;
+//   }
+//   return total;
+// }
 
 // // Вызовы функции для проверки
 // console.log(
@@ -158,6 +192,23 @@ findBestWorker(tasksCompleted)
 //     { name: 'Ajax', age: 3, mood: 'tired' }
 //   ];
   
+// const getAllPropValues=( arr, prop)=>{
+//   const getProp =[];
+
+//   for ( let i of arr){
+//     if ( typeof(i) == 'object'){
+//       const objProps = Object.keys(i);
+//       for ( let key of objProps){
+//         if( key === prop){
+//           getProp.push(i[key]);
+//         }
+//       }
+//     }
+//   }
+
+//   console.log(getProp)
+// }
+
 //   // Вызовы функции для проверки
 //   console.log(
 //     getAllPropValues(users, 'name')
@@ -192,6 +243,24 @@ findBestWorker(tasksCompleted)
 //   функции getUserInfo вывести строку в консоль.
 // */
 
+// const User = function(name,isActive,age,friends){
+//   this.name = name,
+//   this.isActive = isActive,
+//   this.age = age,
+//   this.friends = friends,
+
+//   this.getUserInfo = function(){
+//     console.log(`User ${this.name} is ${this.age} years old and has ${this.friends} friends`)
+//   }
+// }
+
+// const newUser1 = new User('Mango', false, 23, 56);
+// newUser1.getUserInfo();
+// const newUser2 = new User('Bingo', true, 66, 12);
+// newUser2.getUserInfo();
+// const newUser3 = new User('Bella', false, 5, 300);
+// newUser3.getUserInfo();
+
 // // task 8
 
 // /*  
@@ -202,21 +271,21 @@ findBestWorker(tasksCompleted)
 //     products: ['bread', 'cheese', 'milk', 'apples'],
 //     managers: ['poly', 'mango', 'ajax'],
 //     addManager(manager) {
-//       managers.push(manager);
+//       this.managers.push(manager);
       
-//       console.log(managers);
+//       console.log(this.managers);
 //     },
 //     removeManager(manager) {
-//       const idx = managers.indexOf(manager);
+//       const idx = this.managers.indexOf(manager);
       
-//       managers.splice(idx, 1);
+//       this.managers.splice(idx, 1);
       
-//       console.log(managers);
+//       console.log(this.managers);
 //     },
 //     getProducts() {
-//       console.log(products);
+//       console.log(this.products);
       
-//       return products;
+//       return this.products;
 //     }
 //   }
   
@@ -234,21 +303,21 @@ findBestWorker(tasksCompleted)
 // */
 
 // function Account(login, password, type = "regular") {
-//     login = login;
-//     password = password;
-//     type = type;
+//     this.login = login;
+//     this.password = password;
+//     this.type = type;
   
-//     changePassword = function(newPassword) {
-//       password = newPassword;
+//     this.changePassword = function(newPassword) {
+//       this.password = newPassword;
   
-//       console.log(password);
+//       console.log(this.password);
 //     };
   
-//     getAccountInfo = function() {
+//     this.getAccountInfo = function() {
 //       console.log(`
-//         Login: ${login}, 
-//         Pass: ${password}, 
-//         Type: ${type}
+//         Login: ${this.login}, 
+//         Pass: ${this.password}, 
+//         Type: ${this.type}
 //       `);
 //     };
 //   }
