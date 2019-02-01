@@ -259,7 +259,7 @@ const products = {
   
 
   const getTotalPrice=(product, order)=>{
-
+    
   }
   // Вызовы функции для проверки
   console.log(getTotalPrice(products, orderA)); // 140
