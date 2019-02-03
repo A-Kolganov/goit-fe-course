@@ -57,7 +57,7 @@ const products = {
     this.countTotalPrice= function(order) {
         let totalPrice = 0;
         for ( let key in order){   
-            totalPrice += Number(order[key]) * Number(productDatabase[key])  
+              totalPrice += Number(order[key]) * Number(productDatabase[key])  
         }
         return totalPrice
     }
