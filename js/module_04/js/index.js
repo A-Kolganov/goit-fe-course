@@ -56,19 +56,15 @@ const products = {
 
     this.countTotalPrice= function(order) {
         let totalPrice = 0;
-        for ( let key in order){
-            for ( let key2 in productDatabase){
-                if ( key === key2){
-                    totalPrice += Number(order[key]) * Number(productDatabase[key2])
-                }
-            }
+        for ( let key in order){   
+            totalPrice += Number(order[key]) * Number(productDatabase[key])  
         }
         return totalPrice
     }
 
     this.countChange = function (totalPrice){
-        const change = (Number(this.customerMoney)>this.countTotalPrice(order)) ? this.customerMoney - this.countTotalPrice(order) : null;
-        return change;
+        return (this.customerMoney)>this.countTotalPrice(order) ? this.customerMoney - this.countTotalPrice(order) : null;
+        
     }
 
     this.onSuccess= function (change){
