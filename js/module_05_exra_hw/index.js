@@ -235,36 +235,35 @@
 //   PS: используйте метод reduce
 // */
 
-const products = {
-    bread: 10,
-    milk: 15,
-    apples: 20,
-    cheese: 30,
-    chicken: 40
-  };
+// const products = {
+//     bread: 10,
+//     milk: 15,
+//     apples: 20,
+//     cheese: 30,
+//     chicken: 40
+//   };
   
-  const orderA = {
-    bread: 2,
-    apples: 4,
-    chicken: 1
-  };
+//   const orderA = {
+//     bread: 2,
+//     apples: 4,
+//     chicken: 1
+//   };
   
-  const orderB = {
-    bread: 1,
-    milk: 2,
-    cheese: 3
-  };
+//   const orderB = {
+//     bread: 1,
+//     milk: 2,
+//     cheese: 3
+//   };
 
-  
-  
 
-  const getTotalPrice=(product, order)=>{
-    
-  }
-  // Вызовы функции для проверки
-  console.log(getTotalPrice(products, orderA)); // 140
+
+//     function getTotalPrice(products, order) {
+//       return Object.entries(order).reduce((s, p) => s + products[p[0]] * p[1], 0);
+//     }
+//   // Вызовы функции для проверки
+//   console.log(getTotalPrice(products, orderA)); // 140
   
-  console.log(getTotalPrice(products, orderB)); // 130
+//   console.log(getTotalPrice(products, orderB)); // 130
 
   
 // //   task 9
@@ -279,20 +278,21 @@ const products = {
 //   PS: используйте метод every или some, никаких for!
 // */
 
-// const guestsA = [
-//     { name: "Mango", isActive: true },
-//     { name: "Poly", isActive: false },
-//     { name: "Ajax", isActive: true }
-//   ];
+const guestsA = [
+    { name: "Mango", isActive: true },
+    { name: "Poly", isActive: false },
+    { name: "Ajax", isActive: true }
+  ];
   
-//   const guestsB = [
-//     { name: "Mango", isActive: true },
-//     { name: "Poly", isActive: true },
-//     { name: "Ajax", isActive: true }
-//   ];
+  const guestsB = [
+    { name: "Mango", isActive: true },
+    { name: "Poly", isActive: true },
+    { name: "Ajax", isActive: true }
+  ];
   
-//   // Вызовы функции для проверки
-//   console.log(allGuestsActive(guestsA)); // false
+  const allGuestsActive=(guests)=>guests.every(item=>item.isActive)
+  // Вызовы функции для проверки
+  console.log(allGuestsActive(guestsA)); // false
   
-//   console.log(allGuestsActive(guestsB)); // true
+  console.log(allGuestsActive(guestsB)); // true
   
