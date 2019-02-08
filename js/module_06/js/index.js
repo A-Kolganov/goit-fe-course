@@ -89,7 +89,10 @@ class Hamburger {
      * Попробуйте сделать это геттером чтобы можно было обращаться как obj.price и нам вернет сумму.
      */
     get calculatePrice() {
-
+      const priceHamburger = Hamburger.SIZES[this._size].price;
+      const priceStuffing = Hamburger.STUFFINGS[this._stuffing].price;
+      const priceTopping = this._toppings.reduce((acc, item)=>acc+Hamburger.TOPPINGS[item].price, 0);
+      return Number(priceHamburger+priceStuffing+priceTopping)
     }
   
     /**
@@ -99,7 +102,10 @@ class Hamburger {
      * Попробуйте сделать это геттером чтобы можно было обращаться как obj.calories и нам вернет сумму.
      */
     get calculateCalories() {
-
+      const caloriesHamburger = Hamburger.SIZES[this._size].calories;
+      const caloriesStuffing = Hamburger.STUFFINGS[this._stuffing].calories;
+      const caloriesTopping =this._toppings.reduce((acc, item)=>acc+Hamburger.TOPPINGS[item].calories, 0);
+      return Number(caloriesHamburger+caloriesStuffing+caloriesTopping)
     }
   }
   
@@ -107,7 +113,7 @@ class Hamburger {
     Размеры, виды добавок и начинок объявите как статические поля класса.
     Добавьте отсутсвующие поля по аналогии с примером.
   */
- Hamburger.SIZE_SMALL = "SIZE_SMALL";
+Hamburger.SIZE_SMALL = "SIZE_SMALL";
 Hamburger.SIZE_LARGE = "SIZE_LARGE";
 
 Hamburger.SIZES = {
@@ -153,15 +159,14 @@ Hamburger.TOPPINGS = {
     calories: 5
   }
 };
-  
   /* Вот как может выглядеть использование этого класса */
   
   // Маленький гамбургер с начинкой из сыра
   const hamburger = new Hamburger(Hamburger.SIZE_SMALL, Hamburger.STUFFING_CHEESE);
-  
+  console.log(hamburger)
   // Добавка из приправы
   hamburger.addTopping(Hamburger.TOPPING_SPICE);
-  
+
   // Спросим сколько там калорий
   console.log("Calories: ", hamburger.calculateCalories);
   
