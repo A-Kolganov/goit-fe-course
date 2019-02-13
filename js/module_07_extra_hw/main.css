@@ -7,7 +7,12 @@ html {
   *::after {
     box-sizing: inherit;
   }
-  
+  .red {
+    color: red;
+  }
+  .blue {
+    color: blue;
+  }
   body {
     font-family: "Roboto", sans-serif;
     font-size: 16px;
