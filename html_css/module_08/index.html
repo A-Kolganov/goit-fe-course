@@ -1,101 +1,83 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="css/reset.css">
-    <link rel="stylesheet" href="css/style.css">
-    <title>Module 8</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/import.css">
+    <title>Document</title>
 </head>
+
 <body>
     <div class="wrapper">
-        <section class="container">
-            <div class="top-screen">
-                <header class="top-screen__header content-container">
-                    <div class="top-screen__header__logo-link">
-                        <a class="link" href="#">URLAUBSGLÜCK</a>
-                    </div>
-                    <nav class="top-screen__header__nav">
-                        <ul class="header__nav__links-list">
-                            <li>
-                                <a class="link" href="#">Log in</a>
-                            </li>
-                            <li>
-                                <a class="link" href="#">Sign up</a>
-                            </li>
-                        </ul>
+        <div class="container">
+            <header class="head">
+                <div class="menu">
+                    <a href="" class="logo">URLAUBSGLÜCK</a>
+                    <nav class="navigation">
+                        <button class="btn log_in">Log in</button>
+                        <button class="btn sign_up">Sign up</button>
                     </nav>
-                </header>
-                <div class="top-screen__title">
-                    <div class="top-screen__title__heading">
-                        <h1>Share your holiday dreams</h1>
-                    </div>
-                    <div class="top-screen__title__text">
-                        <p>And find the perfect partner to fullfill it</p>
-                    </div>
                 </div>
-                <div class="top-screen__title__link-to-content">
-                    <a class="link" href="">Find your holiday partner</a>
-                </div>
-            </div>
-        </section>
-        <section class="container">
-            <div class="content">
-                <div class="content-title">
-                    <h2>Meet a partner for your best holiday</h2>
-                </div>
-                <div class="content__users-pages">
-                    <div class="content__users-pages__user">
-                        <div class="user-foto first-user-icon">
-                            <img src="img/foto/Layer 6.png" alt="Bradley Hunter">
-                        </div>
-                        <div class="user-name">
-                            <h3>Bradley Hunter</h3>
-                        </div>
-                        <div class="user-info">
-                            <p>Based in Chicago. I love playing tennis and loud music.</p>
-                        </div>
-                    </div>
-                    <div class="content__users-pages__user">
-                        <div class="user-foto second-user-icon">
-                            <img src="img/foto/Layer 8.png" alt="Lucas Marsha">
-                        </div>
-                        <div class="user-name">
-                            <h3>Lucas Marsha</h3>
-                        </div>
-                        <div class="user-info">
-                            <p>I get my inspiration from nature and objects around me. I have a passion to colours, typography and skateboards.</p>
-                        </div>
-                    </div>       
-                    <div class="content__users-pages__user">
-                        <div class="user-foto third-user-icon">
-                            <img src="img/foto/Layer 7.png" alt="Heather Walker">
-                        </div>
-                        <div class="user-name">
-                            <h3>Heather Walker</h3>
-                        </div>
-                        <div class="user-info">
-                            <p>I'm a happy person that loves cats and climbing on mountains.</p>
-                        </div>
-                    </div>
-                    <div class="content__users-pages__user">
-                        <div class="user-foto fourth-user-icon">
-                            <img src="img/foto/Layer 10.png" alt="Bradley Hunter">
-                        </div>
-                        <div class="user-name">
-                            <h3>Bradley Hunter</h3>
-                        </div>
-                        <div class="user-info">
-                            <p>Based in Chicago. I love playing tennis and loud music.</p>
-                        </div>
-                    </div>             
-                </div>
-            </div>
-        </section>
-        <div class="button-c-content">
-            <button class="button-c-content--red">See other partners</button>
+            </header>
+            <section class="find">
+                <h2 class="title">Share your holiday dreams</h2>
+                <p class="phrase">And find the perfect partner to fullfill it</p>
+                <a href="" class="link_button">Find your holiday partner</a>
+            </section>
         </div>
-   </div>
+    </div>
+
+    <main class="main">
+        <section class="container">
+            <h3 class="section_title">Meet a partner for your best holiday</h3>
+            <ul class="partners_list">
+                <li class="partner">
+                    <div class="img">
+                        <figure class="partner-photo">
+                            <img src="img/bradley.png" alt="" class="partner_picture">
+                        </figure>
+                    </div>
+                    <h4 class="partner_name">Bradley Hunter</h4>
+                    <p class="partner_info">Based in Chicago. I love playing tennis and loud music.</p>
+                </li>
+                <li class="partner">
+                    <div class="img">
+                        <figure class="partner-photo bottle_icon">
+                            <img src="img/lucas.png" alt="" class="partner_picture">
+                        </figure>
+                    </div>
+                    <h4 class="partner_name">Lucas Marsha</h4>
+                    <p class="partner_info">I get my inspiration from nature and objects around me. I have a passion to
+                        colours, typography and skateboards.
+                    </p>
+                </li>
+                <li class="partner">
+                    <div class="img">
+                        <figure class="partner-photo tea_icon">
+                            <img src="img/heather.png" alt="" class="partner_picture">
+                        </figure>
+                    </div>
+                    <h4 class="partner_name">Heather Walker</h4>
+                    <p class="partner_info">I'm a happy person that loves cats and climbing on mountains.
+                    </p>
+                </li>
+                <li class="partner">
+                    <div class="img">
+                        <figure class="partner-photo message_icon">
+                            <img src="img/maria.png" alt="" class="partner_picture">
+                        </figure>
+                    </div>
+                    <h4 class="partner_name">Bradley Hunter</h4>
+                    <p class="partner_info">Based in Chicago. I love playing tennis and loud music.</p>
+                </li>
+            </ul>
+            <button class="section_btn">See other partners</button>
+        </section>
+    </main>
+
 </body>
+
 </html>

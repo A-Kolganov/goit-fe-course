@@ -4,7 +4,7 @@ const gulp = require('gulp');
 const sass = require('gulp-sass');
 const postcss = require('gulp-postcss');
 const autoprefixer = require('autoprefixer');
-const csso = require('gulp-csso');
+const cssnano = require('gulp-cssnano');
 const gcmq = require('gulp-group-css-media-queries');
 const del = require('del');
 const htmlmin = require('gulp-htmlmin');
@@ -17,91 +17,95 @@ const babel = require('gulp-babel');
 const uglify = require('gulp-uglify');
 const concat = require('gulp-concat');
 const rename = require('gulp-rename');
-const server = require('browser-sync').create();
+const browserSync = require('browser-sync').create();
 const sequence = require('run-sequence');
 
-gulp.task('html', () => {
-  return gulp
+gulp.task('html', () =>
+  gulp
     .src('./src/*.html')
     .pipe(rigger())
     .pipe(
       htmlmin({
-        collapseWhitespace: true
-      })
+        collapseWhitespace: true,
+      }),
     )
-    .pipe(gulp.dest('./build'));
-});
+    .pipe(gulp.dest('./build')),
+);
 
-gulp.task('styles', () => {
-  return gulp
-    .src('./src/sass/styles.scss')
+gulp.task('styles', () =>
+  gulp
+    .src('./src/scss/styles.scss')
     .pipe(plumber())
     .pipe(
       stylelint({
-        reporters: [{ formatter: 'string', console: true }]
-      })
+        reporters: [{ formatter: 'string', console: true }],
+      }),
     )
     .pipe(sass())
     .pipe(postcss([autoprefixer()]))
     .pipe(gcmq())
     .pipe(gulp.dest('./build/css'))
-    .pipe(csso())
+    .pipe(cssnano())
     .pipe(rename('styles.min.css'))
     .pipe(gulp.dest('./build/css'))
-    .pipe(server.stream());
-});
+    .pipe(browserSync.stream()),
+);
 
-gulp.task('scripts', () => {
-  return gulp
+gulp.task('scripts', () =>
+  gulp
     .src('./src/js/**/*.js')
     .pipe(plumber())
     .pipe(
       babel({
-        presets: ['@babel/env']
-      })
+        presets: ['env'],
+      }),
     )
     .pipe(concat('scripts.js'))
     .pipe(gulp.dest('./build/js'))
     .pipe(uglify())
     .pipe(rename('scripts.min.js'))
-    .pipe(gulp.dest('./build/js'));
-});
+    .pipe(gulp.dest('./build/js')),
+);
 
-gulp.task('sprite', () => {
-  return gulp
-    .src('./src/images/icons/icon-*.svg')
-    .pipe(svgstore({ inlineSvg: true }))
+gulp.task('svg-sprite', () =>
+  gulp
+    .src('./src/img/sprite/**/*.svg')
+    .pipe(
+      svgstore({
+        inlineSvg: true,
+      }),
+    )
     .pipe(rename('sprite.svg'))
-    .pipe(gulp.dest('./build/images'));
-});
+    .pipe(gulp.dest('./build/img')),
+);
 
-gulp.task('images', () => {
-  return gulp
-    .src(['./src/images/**/*.{png,jpg,jpeg,svg}', '!./src/images/icons/**/*'])
+gulp.task('images', () =>
+  gulp
+    .src(['./src/img/**/*.{png,jpg,jpeg,svg}', '!./src/img/sprite/**/*.*'])
     .pipe(
       imagemin([
         imagemin.jpegtran({ progressive: true }),
         imagemin.optipng({ optimizationLevel: 3 }),
         imagemin.svgo({
-          plugins: [{ removeViewBox: false }, { cleanupIDs: false }]
-        })
-      ])
+          plugins: [{ removeViewBox: false }, { cleanupIDs: false }],
+        }),
+      ]),
     )
-    .pipe(gulp.dest('./build/images'));
-});
+    .pipe(gulp.dest('./build/img')),
+);
 
-gulp.task('fonts', () => {
-  return gulp.src('./src/fonts/**/*').pipe(gulp.dest('./build/fonts'));
-});
+gulp.task('fonts', () =>
+  gulp.src('./src/fonts/**/*.{woff,woff2}').pipe(gulp.dest('./build/fonts')),
+);
 
 gulp.task('watch', () => {
-  gulp.watch('src/**/*.html', ['html']).on('change', server.reload);
-  gulp.watch('src/sass/**/*.scss', ['styles']);
-  gulp.watch('src/js/**/*.js', ['scripts']).on('change', server.reload);
+  gulp.watch('src/**/*.html', ['html']).on('change', browserSync.reload);
+  gulp.watch('src/scss/**/*.scss', ['styles']);
+  gulp.watch('src/js/**/*.js', ['scripts']);
 });
 
-gulp.task('serve', ['styles'], () => {
-  return server.init({
+gulp.task('serve', ['styles'], () =>
+  browserSync.init({
     server: './build',
     notify: false,
     open: true,
@@ -109,20 +113,25 @@ gulp.task('serve', ['styles'], () => {
     ui: false,
     logPrefix: 'DevServer',
     host: 'localhost',
-    port: 3000
-  });
-});
+    port: 3000,
+  }),
+);
 
 gulp.task('del:build', () => del('./build'));
 
 gulp.task('prepare', () => del(['**/.gitkeep', 'README.md', 'banner.png']));
 
-gulp.task('build', callback =>
+gulp.task('build', cb =>
   sequence(
     'del:build',
-    ['sprite', 'images', 'fonts', 'styles', 'html', 'scripts'],
-    callback
-  )
+    'svg-sprite',
+    'images',
+    'fonts',
+    'styles',
+    'html',
+    'scripts',
+    cb,
+  ),
 );
 
-gulp.task('start', callback => sequence('build', 'serve', 'watch', callback));
+gulp.task('start', cb => sequence('build', 'serve', 'watch'));
