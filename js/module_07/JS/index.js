@@ -37,18 +37,19 @@ link: 'link-3.com'
 const films = document.querySelector('.films');
 
 function createCards(posts){
-  posts.forEach(item => {
-      films.appendChild(createPostCard(item.img,item.title,item.text,item.link));
+  const cards = []
+  const createdCards = posts.forEach(e => {
+    cards.push(createPostCard(e));
   });
-  
+  films.append(...cards)
 }
-function createPostCard(image, title, text, link){
+function createPostCard(cardItem){
     const card = document.createElement('div');
     card.classList.add('movie')
 
     const img = document.createElement('img');
     img.classList.add('movie__image');
-    img.setAttribute('src', image);
+    img.setAttribute('src', cardItem.img);
     img.setAttribute('alt', 'movie image');
 
     const cardTextBox = document.createElement('div');
@@ -56,22 +57,19 @@ function createPostCard(image, title, text, link){
 
     const titleName = document.createElement('h2');
     titleName.classList.add('movie__title');
-    titleName.textContent = title;
+    titleName.textContent = cardItem.title;
 
     const textMovie = document.createElement('p');
     textMovie.classList.add('movie__description');
-    textMovie.textContent = text;
+    textMovie.textContent = cardItem.text;
 
     const linkMovie = document.createElement('a');
     linkMovie.classList.add('movie__link');
     linkMovie.textContent = `Click link!`;
-    linkMovie.setAttribute('href', link);
+    linkMovie.setAttribute('href', cardItem.link);
     
-    cardTextBox.appendChild(titleName);
-    cardTextBox.appendChild(textMovie);
-    cardTextBox.appendChild(linkMovie);
-    card.appendChild(img);
-    card.appendChild(cardTextBox);
+    cardTextBox.append(titleName,textMovie,linkMovie);
+    card.append(img,cardTextBox);
 
     return card;
 }
