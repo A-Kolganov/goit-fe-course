@@ -93,7 +93,7 @@ function setImg(e){
       return
     }
       const i = e.target;
-    fullViewIMg.src = i.getAttribute("data-fullview")
+    fullViewIMg.setAttribute('src', i.dataset.fullview)
     fullViewIMg.setAttribute('alt', i.alt );
 }
 

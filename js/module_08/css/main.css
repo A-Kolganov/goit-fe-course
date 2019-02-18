@@ -39,6 +39,7 @@
 .list__img{
     width: 100%;
     display:block;
+    border-radius: 10px;
 }
 .selected{
     outline: 3px #22ff22 solid;
