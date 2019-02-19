@@ -73,6 +73,8 @@ list.classList.add('preview');
 
 const listItems = galleryItems.map( i => createImg(i));
 
+let currentImg= null;
+
 function createImg(i){
     const item = document.createElement('li');
     const img = document.createElement('img');
@@ -89,15 +91,23 @@ function defaultImg(i = galleryItems[0]){
     fullViewIMg.setAttribute('alt', i.alt );
 }
 function setImg(e){
+    if (currentImg !== null && currentImg.classList.contains('selected')){
+      currentImg.classList.remove('selected')
+    };
     if(e.target.tagName !== 'IMG'){
       return
     }
       const i = e.target;
+      currentImg = e.target;
+      currentImg.classList.add('selected');
+      console.log(typeof(currentImg));
+      console.log(e.target);
     fullViewIMg.setAttribute('src', i.dataset.fullview)
     fullViewIMg.setAttribute('alt', i.alt );
 }
 
-
+console.log(currentImg)
+console.log(galleryItems[0])
 
 list.addEventListener('click', setImg)
 
