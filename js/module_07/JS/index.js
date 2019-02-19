@@ -37,10 +37,7 @@ link: 'link-3.com'
 const films = document.querySelector('.films');
 
 function createCards(posts){
-  const cards = []
-  const createdCards = posts.forEach(e => {
-    cards.push(createPostCard(e));
-  });
+  const cards = posts.map(e=>createPostCard(e))
   films.append(...cards)
 }
 function createPostCard(cardItem){
