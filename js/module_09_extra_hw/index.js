@@ -14,8 +14,40 @@
   Start не имело эффекта.
 */
 
-const colors = ['#FFFFFF', '#F44336', '#2196F3', '#4CAF50', '#FF9800', '#009688', '#795548'];
+// const colors = ['#FFFFFF', '#F44336', '#2196F3', '#4CAF50', '#FF9800', '#009688', '#795548'];
+// console.log(colors[2])
+// const startBtn = document.querySelector('.js-start');
+// const stopBtn = document.querySelector('.js-stop');
+// let timerID = null;
+// let turnTimer = false;
+// startBtn.addEventListener('click', onStart);
+// stopBtn.addEventListener('click', onStop);
 
+
+// function onStop(){
+//   clearInterval(timerID);
+//   turnTimer = false;
+// }
+
+
+// function onStart(){
+//   if(turnTimer){
+//     return
+//   }
+//   turnTimer = true;
+//   timerID = setInterval(go,1000);
+// }
+
+ 
+
+// function go(){
+//     let colorIdx = 0;
+//     do { 
+//     colorIdx = Number.parseInt(Math.random()*10);
+//     }while(colorIdx >= colors.length);
+//    document.body.setAttribute('bgcolor', colors[colorIdx])
+//     console.log(colors[colorIdx])
+// }
 // task 2
 
 /* 
@@ -29,21 +61,28 @@ const colors = ['#FFFFFF', '#F44336', '#2196F3', '#4CAF50', '#FF9800', '#009688'
   то есть если сейчас 831мс то нам интересна исключительно цифра 8.
 */
 
-function getFormattedTime(time) {
-    return '';
-  }
+// function getFormattedTime(time) {
+//   let date = new Date(time);
+//   let minutes = date.getMinutes();
+//   let seconds = date.getSeconds();
+//   let milliseconds = Number.parseInt(date.getMilliseconds()/100);
+//   console.log(date)
+//   console.log(time)
+//     return `${minutes}:${seconds}.${milliseconds}`;
   
-  console.log(
-    getFormattedTime(1523621052858)
-  ); // 04:12.8
+//   }
   
-  console.log(
-    getFormattedTime(1523621161159)
-  ); // 06:01.1
+//   console.log(
+//     getFormattedTime(1523621052858)
+//   ); // 04:12.8
   
-  console.log(
-    getFormattedTime(1523621244239)
-  ); // 07:24.2
+//   console.log(
+//     getFormattedTime(1523621161159)
+//   ); // 06:01.1
+  
+//   console.log(
+//     getFormattedTime(1523621244239)
+//   ); // 07:24.2
    
   
 //  task 3  
@@ -71,16 +110,62 @@ function getFormattedTime(time) {
       нет смысла выполнять пересчет времени чаще чем каждые 100мс.
 */
 
-const clockface = document.querySelector(".js-clockface");
-const startBtn = document.querySelector(".js-timer-start");
-const stopBtn = document.querySelector(".js-timer-stop");
+// const clockface = document.querySelector(".js-clockface");
+// const startBtn = document.querySelector(".js-timer-start");
+// const stopBtn = document.querySelector(".js-timer-stop");
 
-const timer = {
-  startTime: null,
-  deltaTime: null,
-  id: null
-};
+// startBtn.addEventListener('click', startTime);
+// stopBtn.addEventListener('click', stopTimer);
 
+
+// const timer = {
+//   startTime: null,
+//   deltaTime: null,
+//   id: null,
+//   turnTimer: false
+// };
+
+// function startTime(){
+//   if(timer.turnTimer === true){
+//         return
+//       }
+//   timer.turnTimer = true;    
+//   timer.startTime = Date.now();
+//   timer.id = setInterval(() => {
+//     timer.deltaTime = Date.now() - timer.startTime;
+//     updateClockface(clockface, timer.deltaTime );
+//   }, 100);
+// };
+// function stopTimer(){
+//   clearInterval(timer.id);
+//   timer.turnTimer = false;  
+// };
+// function getFormattedTime(deltaTime){
+//   const time= new Date(deltaTime);
+//   let minutes = time.getMinutes();
+//   let seconds = time.getSeconds();
+//   let milliseconds = Number.parseInt(time.getMilliseconds()/100);
+//   let resultM = 0;
+//   let resultS = 0;
+//   if (Number(minutes)<10){
+//     minutes = '0' + minutes;
+//   }
+//   if (Number(seconds)<10){
+//     seconds = '0' + seconds;
+//   }
+  // if(minutes.length < 2){
+  //   return resultM ='0 + minutes';
+  // } else{
+  //   resultM = minutes
+  // }
+  // if(seconds.length < 2){
+  //   return resultS ='0 + seconds';
+  // } else {
+  //   result = seconds
+  // }
+//   return `${minutes}:${seconds}.${milliseconds}`
+
+// };
 /*
 * Вспомогательные функции
 */
@@ -89,24 +174,26 @@ const timer = {
 * Обновляет поле счетчика новым значением при вызове
 * аргумент time это кол-во миллисекунд
 */
-function updateClockface(elem, time) {
-  // Используйте функцию getFormattedTime из задания #1
-  // elem.textContent = getFormattedTime(time);
-}
+// function updateClockface(elem, time) {
+//   const getTime = getFormattedTime(time)
+//   // Используйте функцию getFormattedTime из задания #1
+//   // elem.textContent = getFormattedTime(time);
+//   elem.textContent = getTime; 
+// }
 
 /*
 * Подсветка активной кнопки
 */
-function setActiveBtn(target) {
-  if(target.classList.contains('active')) {
-    return;
-  }
+// function setActiveBtn(target) {
+//   if(target.classList.contains('active')) {
+//     return;
+//   }
   
-  startBtn.classList.remove('active');
-  stopBtn.classList.remove('active');
+//   startBtn.classList.remove('active');
+//   stopBtn.classList.remove('active');
   
-  target.classList.add('active');
-}
+//   target.classList.add('active');
+// }
 
 // task 4
 
@@ -133,7 +220,12 @@ function setActiveBtn(target) {
 const DELAY = 1000;
 
 let goodsAmount = 100;
+const promise = new Promise((resolve, reject)={
+  
+});
+function processOrder(amount){
 
+}
 // Вызовы функции для проверки
 processOrder(50)
   .then(result => console.log(result)) // Ваш заказ готов!
