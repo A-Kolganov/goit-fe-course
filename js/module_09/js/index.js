@@ -89,6 +89,9 @@ class Stopwatch{
     this.startTime = null;
     this.deltaTime = null;
     this.btnStart.textContent = 'Start'; 
+    this.arrLaps = [];
+    this.lapList.innerHTML = "";
+
   }
 
   newLap(){
