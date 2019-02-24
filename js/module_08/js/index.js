@@ -87,6 +87,8 @@ function createImg(i){
     list.appendChild(item);
 }
 function defaultImg(i = galleryItems[0]){
+  currentImg = list.firstChild.firstChild;
+  currentImg.classList.add('selected');
     fullViewIMg.setAttribute('src', i.fullview );
     fullViewIMg.setAttribute('alt', i.alt );
 }
@@ -96,18 +98,13 @@ function setImg(e){
     };
     if(e.target.tagName !== 'IMG'){
       return
-    }
+    };
       const i = e.target;
       currentImg = e.target;
       currentImg.classList.add('selected');
-      console.log(typeof(currentImg));
-      console.log(e.target);
     fullViewIMg.setAttribute('src', i.dataset.fullview)
     fullViewIMg.setAttribute('alt', i.alt );
 }
-
-console.log(currentImg)
-console.log(galleryItems[0])
 
 list.addEventListener('click', setImg)
 
