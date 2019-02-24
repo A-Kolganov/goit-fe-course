@@ -217,24 +217,39 @@
   Если же пользователь ввел не число, то выдайте ошибку throw new Error("Некорректный ввод!")  
 */
 
-const DELAY = 1000;
+const DELAY = 500;
 
 let goodsAmount = 100;
-const promise = new Promise((resolve, reject)={
-  
-});
-function processOrder(amount){
 
+function processOrder(amount){
+  if(typeof(amount) !== 'number'){
+    console.log('облом')
+  }
+  return new Promise((resolve,reject)=>{
+    setTimeout(()=>{
+      if(typeof(amount) !== 'number'){
+        throw new Error("Некорректный ввод!");
+      }
+      if(amount <= DELAY){
+        resolve("Ваш заказ готов!");
+      }
+      resolve("сожалению на складе не достаточно товаров!");
+    }
+  ), DELAY})
 }
 // Вызовы функции для проверки
 processOrder(50)
   .then(result => console.log(result)) // Ваш заказ готов!
   .catch(err => console.log(err));
 
-processOrder(50)
+processOrder(500)
   .then(result => console.log(result)) // Ваш заказ готов!
   .catch(err => console.log(err));
 
-processOrder(500)
+processOrder(1000)
+  .then(result => console.log(result)) // К сожалению на складе недостаточно товаров!
+  .catch(err => console.log(err))
+
+  processOrder('sdfs')
   .then(result => console.log(result)) // К сожалению на складе недостаточно товаров!
   .catch(err => console.log(err))
