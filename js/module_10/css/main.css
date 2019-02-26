@@ -1,0 +1,82 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.DB-work{
+    width: 1200px;
+    height: auto;
+    margin: 10px auto;
+    
+    background-color: #b18bc0;
+    border-radius: 20px;
+}
+.DB {
+    display: flex;
+    justify-content: space-between ;
+    flex-wrap: nowrap;
+    flex-direction: row;
+}
+.DB__all-users,.DB__user-options{
+    background-color: #6a5374;
+    width: 100%;
+    height: auto;
+    border-radius: 20px;
+    margin: 10px;
+}
+.btn {
+    background-color: #000000;
+    border: 2px #ffffff solid;
+    width: 100px;
+    height: 50px;
+    border-radius: 15px;
+    color: #ffffff;
+    font-weight: bolder;
+    margin: 10px auto;
+    display: block;
+    cursor: pointer;
+}
+.user-options{
+    background-color: #b18bc0;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 10px;
+}
+table{
+    width: 100%;
+    padding: 5px;
+    text-align: center;
+}
+th{
+    width:33%;
+}
+td{
+    width:33%;
+    background-color: #ffffff;
+    border-radius: 5px;
+    height: 40px;
+}
+input{
+    display: block;
+    width: 75%;
+    margin: 10px auto;
+    padding: 5px;
+    height: 30px;
+    border-radius: 10px; 
+}
+.find-user__result,.add-user__result,.remove-user__result,.update-user__result{
+    text-align: center;
+    background-color: #ffffff;
+    border-radius: 10px;
+    height: 50px;
+    line-height: 50px;
+    font-weight: bolder;
+}
+.correct{
+    color: #33aa33;
+   border: 2px solid #33aa33;
+}
+.incorrect{
+    color: #ff3333;
+    border: 2px solid #ff3333;
+}
