@@ -25,26 +25,38 @@
   поведение по умолчанию.
 */
 
-const input = document.querySelector("input");
-const form = document.querySelector(".search-form");
-const result = document.querySelector(".result");
-const API_URL = "https://restcountries.eu/rest/v2/name/";
+// const input = document.querySelector("input");
+// const form = document.querySelector(".search-form");
+// const result = document.querySelector(".result");
+// const API_URL = "https://restcountries.eu/rest/v2/name/";
 
-form.addEventListener("submit", fetchCountryData);
+// form.addEventListener("submit", fetchCountryData);
 
-/*
-  @param {FormEvent} evt
-*/
-function fetchCountryData(evt) {
-    evt.preventDefault();
-   fetch(`https://restcountries.eu/rest/v2/name/${input.value}`)
-  .then(response => {
-    if(response.ok) return response.json(); 
+// /*
+//   @param {FormEvent} evt
+// */
+// function fetchCountryData(evt) {
+//     evt.preventDefault();
+//    fetch(`https://restcountries.eu/rest/v2/name/${input.value}`
+//   //  ,{
+//   //    method: 'GET' ,
+//   //    headers: {
+//   //      'Content-Type':'application/json'
+//   //     },
+//     //  body: JSON.stringify(obj)
+//   //  }
+//    )
+//   .then(response => {
+//     if(response.ok){ 
+//       return response.json();
+//     } 
 
-    throw new Error(`Error while fetching: ${response.statusText}`);
-  })
-  .then(data => console.log(data)).catch(err => console.log(err) )
-}
+//     throw new Error(`Error while fetching: ${response.statusText}`);
+//   })
+// .then(data => console.log(data[0].name,data[0].capital,data[0].flag,data[0].currencies[0].name, data)
+// )
+//   .catch(err => console.log(err) )
+// }
 
 
 // task 2
@@ -81,7 +93,29 @@ function fetchCountryData(evt) {
 // /*
 //   @param {FormEvent} evt
 // */
-// function fetchUserData(evt) {}
+// function fetchUserData(e) {
+//   e.preventDefault();
+//   fetch(`https://api.github.com/users/${input.value}`,{
+//   headers : {
+//     'Accept': 'application/vnd.github.v3+json',
+//   }})
+//   .then(response =>{
+//     if(response.ok) return response.json();
+//     throw new Error(`Error while fetching: ${response.statusText}`);
+//   }).then(data=>{
+//     const ava = document.createElement('img');
+//     ava.setAttribute('src', data.avatar_url);
+//        result.append(ava);
+//        const p = document.createElement('p');
+//        result.append(p);
+//        p.textContent = `Username: ${data.name},
+//            Bio: ${data.bio},
+//            Public repos: ${data.public_repos}`
+  
+//   })
+//   .catch(err=> console.log(err))
+// }
+
 
 
 // task 3
@@ -104,7 +138,7 @@ function fetchCountryData(evt) {
 // */
 
 // const form = document.querySelector(".search-form");
-// const userTable = document.querySelector(".users-table");
+// const userTable = document.querySelector(".user-table");
 
 // form.addEventListener("submit", fetchUsers);
 
@@ -112,8 +146,23 @@ function fetchCountryData(evt) {
 //   @param {FormEvent} evt
 // */
 // function fetchUsers(evt) {
-//   // ...
+//    evt.preventDefault();
+//   return fetch('https://jsonplaceholder.typicode.com/users/')
+//   .then(response =>{
+//     if (response.ok){
+//       return response.json();
+//     }
+//     throw new Error(`Error while fetching: ${response.statusText}`);
+//   }).then(data => {
+//     console.log(data);
+//     userTable.innerHTML = data.reduce( (acc, user) =>
+//       acc +`<tr><td>${user.name}</td><td>${user.email}</td><td>${user.address.city}</td><td>${user.website}</td><td>${user.company.name}</td></tr>`
+//       ,""
+//     )
+//   })
+//   .catch(err => console.log(err));
 // }
+
 
 // task 4
 
