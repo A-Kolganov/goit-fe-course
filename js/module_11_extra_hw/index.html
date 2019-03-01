@@ -10,25 +10,39 @@
 <body>
 
     <!-- task 1 -->
-    <ul class="products">
-            <li>
-              <span class="name">Name: name placeholder</span>
-              <span class="count">Count: count placeholder</span>
-            </li>
-          </ul>
+ 
+    <!-- <ul class="products">
+         
+     </ul>
 
+    <template id="products-list">
+        {{#each this}}
+        <li>
+          <span class="name">Name:{{name}}</span>
+          <span class="count">Count:{{count}}</span>
+        </li>
+        {{/each}} 
+      </template> -->
           <!-- task 2 -->
+      <!-- <div class="root">
 
-          <!-- <div class="post">
-                <h2 class="title">Post title placeholder</h2>
-                <p class="text">Post text placeholder</p>
-                <span class="fav-icon"></span>
-              </div> -->
+      </div>
 
+      <template id="tmpl">
+ 
+          <div class="post">
+                <h2 class="title">{{title}}</h2>
+                <p class="text">{{text}}</p>
+                {{#if isFav}}
+                <span class="fav-icon"><img width="100px" src="https://image.flaticon.com/icons/svg/290/290413.svg" alt=""></span>
+                {{/if}}
+              </div>
+    
+      </template> -->
               <!-- task 3 -->
 
 
-              <!-- <div class="container">
+              <div class="container">
                     <div class="row">
                       <form acrion="#" class="col s12">
                         <div class="row">
@@ -48,9 +62,9 @@
                       <ul class="results col s12">
                       </ul>
                     </div>
-                  </div> -->
+                  </div>
 
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.11/handlebars.min.js"></script>
     <script src="./index.js"></script>
 </body>
 </html>

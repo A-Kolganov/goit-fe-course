@@ -11,13 +11,18 @@
   Отрендерите список в DOM по данным из массива listItems.
 */
 
-const products = [
-    { name: 'Apples', count: 50 },
-    { name: 'Grapes', count: 44 },
-    { name: 'Cheese', count: 128 },
-    { name: 'Milk', count: 293 },
-  ];
-
+// const products = [
+//     { name: 'Apples', count: 50 },
+//     { name: 'Grapes', count: 44 },
+//     { name: 'Cheese', count: 128 },
+//     { name: 'Milk', count: 293 },
+//   ];
+//   const list = document.querySelector('.products')
+//   const source = document.querySelector('#products-list').innerHTML.trim();
+//   const template = Handlebars.compile(source)
+//   const markup = template(products);
+//   list.insertAdjacentHTML('afterbegin', markup)
+//   console.log(template)
 //   task 2
 
 // /*
@@ -62,36 +67,41 @@ const products = [
 //     }
 //   ];
 
-  
+//   const root = document.querySelector('.root');
+//   const source = document.querySelector('#tmpl').innerHTML.trim();
+//   const template = Handlebars.compile(source);
+//   const markup = posts.reduce((acc,post)=> acc + template(post),'');
+//   root.insertAdjacentHTML('afterbegin', markup);
+//   console.log(markup)
 //   task 3
 
-// /* 
-//   Напишите функцию validate которая проверяет поля формы 
-//   firstname и lastname и возвращает результат в виде 
-//   обьекта со свойствами 'first name' и 'last name'.
+/* 
+  Напишите функцию validate которая проверяет поля формы 
+  firstname и lastname и возвращает результат в виде 
+  обьекта со свойствами 'first name' и 'last name'.
   
-//   Кроме того, формат объекта: в свойства записывается буль-флаг 
-//   уведомляющий о статусе прохождения валидации для каждого поля.
-//   {
-//     'first name': true или false,
-//     'last name': true или false,
-//   }
+  Кроме того, формат объекта: в свойства записывается буль-флаг 
+  уведомляющий о статусе прохождения валидации для каждого поля.
+  {
+    'first name': true или false,
+    'last name': true или false,
+  }
   
-//   Критерии валидации:
-//   1)Имя. Допускается не более 2-х слов, разделенных пробелами
-//   или дефисом. Слова должны состоять только из букв.
+  Критерии валидации:
+  1)Имя. Допускается не более 2-х слов, разделенных пробелами
+  или дефисом. Слова должны состоять только из букв.
   
-//   2)Фамилия. Допускается не более 2-х слов, разделенных пробелами
-//   или дефисом. Слова должны состоять только из букв.
+  2)Фамилия. Допускается не более 2-х слов, разделенных пробелами
+  или дефисом. Слова должны состоять только из букв.
   
-//   При клике на кнопку submit должна происходить проверка.
-//   Результат проверки, объект, выводить в консоль.
-// */
+  При клике на кнопку submit должна происходить проверка.
+  Результат проверки, объект, выводить в консоль.
+*/
 
-// const firstname = document.getElementById("first_name");
-// const lastname = document.getElementById("last_name");
-// const submitBtn = document.getElementById("submit-btn");
+const firstname = document.getElementById("first_name");
+const lastname = document.getElementById("last_name");
+const submitBtn = document.getElementById("submit-btn");
 
-// submitBtn.addEventListener("click", validate);
+submitBtn.addEventListener("click", validate);
 
-// function validate(evt) {}
+function validate(evt) {}
