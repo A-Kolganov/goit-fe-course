@@ -83,38 +83,38 @@
 //   Все необходимые данные есть в ответе от API.
 // */
 
-// const input = document.querySelector("input");
-// const form = document.querySelector(".search-form");
-// const result = document.querySelector(".result");
-// const API_URL = "";
+const input = document.querySelector("input");
+const form = document.querySelector(".search-form");
+const result = document.querySelector(".result");
+const API_URL = "";
 
-// form.addEventListener("submit", fetchUserData);
+form.addEventListener("submit", fetchUserData);
 
-// /*
-//   @param {FormEvent} evt
-// */
-// function fetchUserData(e) {
-//   e.preventDefault();
-//   fetch(`https://api.github.com/users/${input.value}`,{
-//   headers : {
-//     'Accept': 'application/vnd.github.v3+json',
-//   }})
-//   .then(response =>{
-//     if(response.ok) return response.json();
-//     throw new Error(`Error while fetching: ${response.statusText}`);
-//   }).then(data=>{
-//     const ava = document.createElement('img');
-//     ava.setAttribute('src', data.avatar_url);
-//        result.append(ava);
-//        const p = document.createElement('p');
-//        result.append(p);
-//        p.textContent = `Username: ${data.name},
-//            Bio: ${data.bio},
-//            Public repos: ${data.public_repos}`
+/*
+  @param {FormEvent} evt
+*/
+function fetchUserData(e) {
+  e.preventDefault();
+  fetch(`https://api.github.com/users/${input.value}`,{
+  headers : {
+    'Accept': 'application/vnd.github.v3+json',
+  }})
+  .then(response =>{
+    if(response.ok) return response.json();
+    throw new Error(`Error while fetching: ${response.statusText}`);
+  }).then(data=>{
+    const ava = document.createElement('img');
+    ava.setAttribute('src', data.avatar_url);
+       result.append(ava);
+       const p = document.createElement('p');
+       result.append(p);
+       p.textContent = `Username: ${data.name},
+           Bio: ${data.bio},
+           Public repos: ${data.public_repos}`
   
-//   })
-//   .catch(err=> console.log(err))
-// }
+  })
+  .catch(err=> console.log(err))
+}
 
 
 
