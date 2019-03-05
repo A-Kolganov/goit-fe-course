@@ -25,38 +25,38 @@
   поведение по умолчанию.
 */
 
-// const input = document.querySelector("input");
-// const form = document.querySelector(".search-form");
-// const result = document.querySelector(".result");
-// const API_URL = "https://restcountries.eu/rest/v2/name/";
+const input = document.querySelector("input");
+const form = document.querySelector(".search-form");
+const result = document.querySelector(".result");
+const API_URL = "https://restcountries.eu/rest/v2/name/";
 
-// form.addEventListener("submit", fetchCountryData);
+form.addEventListener("submit", fetchCountryData);
 
-// /*
-//   @param {FormEvent} evt
-// */
-// function fetchCountryData(evt) {
-//     evt.preventDefault();
-//    fetch(`https://restcountries.eu/rest/v2/name/${input.value}`
-//   //  ,{
-//   //    method: 'GET' ,
-//   //    headers: {
-//   //      'Content-Type':'application/json'
-//   //     },
-//     //  body: JSON.stringify(obj)
-//   //  }
-//    )
-//   .then(response => {
-//     if(response.ok){ 
-//       return response.json();
-//     } 
+/*
+  @param {FormEvent} evt
+*/
+function fetchCountryData(evt) {
+    evt.preventDefault();
+   fetch(`https://restcountries.eu/rest/v2/name/${input.value}`
+  //  ,{
+  //    method: 'GET' ,
+  //    headers: {
+  //      'Content-Type':'application/json'
+  //     },
+    //  body: JSON.stringify(obj)
+  //  }
+   )
+  .then(response => {
+    if(response.ok){ 
+      return response.json();
+    } 
 
-//     throw new Error(`Error while fetching: ${response.statusText}`);
-//   })
-// .then(data => console.log(data[0].name,data[0].capital,data[0].flag,data[0].currencies[0].name, data)
-// )
-//   .catch(err => console.log(err) )
-// }
+    throw new Error(`Error while fetching: ${response.statusText}`);
+  })
+.then(data => console.log(data[0].name,data[0].capital,data[0].flag,data[0].currencies[0].name, data)
+)
+  .catch(err => console.log(err) )
+}
 
 
 // task 2
@@ -83,38 +83,38 @@
 //   Все необходимые данные есть в ответе от API.
 // */
 
-const input = document.querySelector("input");
-const form = document.querySelector(".search-form");
-const result = document.querySelector(".result");
-const API_URL = "";
+// const input = document.querySelector("input");
+// const form = document.querySelector(".search-form");
+// const result = document.querySelector(".result");
+// const API_URL = "";
 
-form.addEventListener("submit", fetchUserData);
+// form.addEventListener("submit", fetchUserData);
 
-/*
-  @param {FormEvent} evt
-*/
-function fetchUserData(e) {
-  e.preventDefault();
-  fetch(`https://api.github.com/users/${input.value}`,{
-  headers : {
-    'Accept': 'application/vnd.github.v3+json',
-  }})
-  .then(response =>{
-    if(response.ok) return response.json();
-    throw new Error(`Error while fetching: ${response.statusText}`);
-  }).then(data=>{
-    const ava = document.createElement('img');
-    ava.setAttribute('src', data.avatar_url);
-       result.append(ava);
-       const p = document.createElement('p');
-       result.append(p);
-       p.textContent = `Username: ${data.name},
-           Bio: ${data.bio},
-           Public repos: ${data.public_repos}`
-  
-  })
-  .catch(err=> console.log(err))
-}
+// /*
+//   @param {FormEvent} evt
+// */
+// function fetchUserData(e) {
+//   e.preventDefault();
+//   fetch(`https://api.github.com/users/${input.value}`,{
+//   headers : {
+//     'Accept': 'application/vnd.github.v3+json',
+//   }})
+//   .then(response =>{
+//     if(response.ok) return response.json();
+//     throw new Error(`Error while fetching: ${response.statusText}`);
+//   }).then(data=>{
+//     const ava = document.createElement('img');
+//     ava.setAttribute('src', data.avatar_url);
+//        result.append(ava);
+//        const p = document.createElement('p');
+//        result.append(p);
+//        p.textContent = `Username: ${data.name},
+//            Bio: ${data.bio},
+//            Public repos: ${data.public_repos}`
+//     console.log(data);
+//   })
+//   .catch(err=> console.log(err))
+// }
 
 
 

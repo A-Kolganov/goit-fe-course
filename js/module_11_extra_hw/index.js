@@ -101,7 +101,31 @@
 const firstname = document.getElementById("first_name");
 const lastname = document.getElementById("last_name");
 const submitBtn = document.getElementById("submit-btn");
+const form = document.querySelector('.form')
 
-submitBtn.addEventListener("click", validate);
+form.addEventListener("submit", validate);
+const VALIDATOR = {
+  patterns:{
+    name: /^[a-z]+[ -]?([a-z]+)?$/i ,
+  },
+  validate(formElement){
+    const inputs = formElement.querySelectorAll('input');
+    inputs.forEach(({name,value})=>{
+      const valid = this.isValid(name, value);
+      console.group('group');
+      console.log('name:', name );
+      console.log('value:', value);
+      console.log('valid:', valid);
+      console.groupEnd('group');
+    } )
+  },
+ isValid(patternKey, value){
 
-function validate(evt) {}
+  }
+}
+
+function validate(evt) {
+  evt.preventDefault();
+
+  VALIDATOR.validate(form)
+}
