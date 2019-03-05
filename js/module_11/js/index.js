@@ -1,61 +1,5 @@
 'use strict';
 
-/*
-  Реализуйте форму фильтра товаров в каталоге и список отфильтрованных товаров.
-  Используйте шаблонизацию для создания карточек товаров.
-  
-  Есть массив объектов (дальше в задании), каждый из которых описывает 
-  ноутбук с определенными характеристиками.
-  
-  Поля объекта по которым необходимо производить фильтрацию: size, color, release_date.
-  Поля объекта для отображения в карточке: name, img, descr, color, price, release_date.
-    
-  Изначально есть форма с 3-мя секциями, состоящими из заголовка и группы 
-  чекбоксов (разметка дальше в задании). После того как пользователь выбрал 
-  какие либо чекбоксы и нажал кнопку Filter, необходимо собрать значения чекбоксов по группам. 
-  
-  🔔 Подсказка: составьте объект формата
-      const filter = { size: [], color: [], release_date: [] }
-    
-  После чего выберите из массива только те объекты, которые подходят 
-  под выбраные пользователем критерии и отрендерите список карточек товаров.
-  
-  🔔 Каждый раз когда пользователь фильтрует товары, список карточек товаров очищается, 
-      после чего в нем рендерятся новые карточки товаров, соответствующих текущим критериям фильтра.
-*/
-
-/*
-  HTML для формы
-  <form class="form js-form">
-    <section>
-      <h2>Screen size</h2>
-      <ul>
-        <li><label><input type="checkbox" name="size" value="13"> 13"</label></li>
-        <li><label><input type="checkbox" name="size" value="15"> 15"</label></li>
-        <li><label><input type="checkbox" name="size" value="17"> 17"</label></li>
-      </ul>
-    </section>
-    <section>
-      <h2>Color</h2>
-      <ul>
-        <li><label><input type="checkbox" name="color" value="white"> white</label></li>
-        <li><label><input type="checkbox" name="color" value="gray"> gray</label></li>
-        <li><label><input type="checkbox" name="color" value="black"> black</label></li>
-      </ul>
-    </section>
-    <section>
-      <h2>Release date</h2>
-      <ul>
-        <li><label><input type="checkbox" name="release_date" value="2015"> 2015</label></li>
-        <li><label><input type="checkbox" name="release_date" value="2016"> 2016</label></li>
-        <li><label><input type="checkbox" name="release_date" value="2017"> 2017</label></li>
-      </ul>
-    </section>
-    <button type="submit">Filter</button>
-    <button type="reset">Clear</button>
-  </form>
-*/
-
 const laptops = [
     {
       size: 13,
@@ -148,3 +92,56 @@ const laptops = [
         'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat, beatae.',
     },
   ];
+
+const productsList = document.querySelector('.products-list');
+const btnFilter = document.querySelector('.js-filter');
+const btnReset = document.querySelector('.js-reset');
+const form = document.querySelector('.js-form')
+
+const source = document.querySelector('#product-card').innerHTML.trim();
+const template = Handlebars.compile(source);
+const markup = laptops.reduce((acc,laptop)=> acc + template(laptop),'');
+
+productsList.insertAdjacentHTML('afterbegin', markup);
+
+form.addEventListener('submit', filterLaptops);
+
+function filterLaptops(e){
+  e.preventDefault();
+
+  const size =  Array.from(form.querySelectorAll("input")
+  ).filter(item=>item.name === 'size' && item.checked).map(item => Number(item.value));
+  
+  const color =  Array.from(form.querySelectorAll("input")
+  ).filter(item=>item.name === 'color' && item.checked).map(item => item.value);
+  
+  const releaseDate = Array.from(form.querySelectorAll("input")
+  ).filter(item=>item.name === 'release_date' && item.checked).map(item => Number(item.value));
+  
+  const filteredCards= laptops.filter(item=>
+     size.length === 0 ? item :  size.includes(item.size)
+  ).filter(item=>
+    color.length === 0 ? item : color.includes(item.color)
+    ).filter(item=>
+      releaseDate.length === 0 ? item : releaseDate.includes(item.release_date))
+  console.log(filteredCards)
+  productsList.innerHTML = [];
+  const newMarkup = filteredCards.reduce((acc,laptop)=> acc + template(laptop),'');
+  if (filteredCards.length === 0){
+    const err = document.createElement('p');
+    err.classList.add('err');
+    err.textContent = `no match found! please try again!`;
+    productsList.appendChild(err)
+  }
+  productsList.insertAdjacentHTML('afterbegin', newMarkup);
+}
+
+
+btnReset.addEventListener('click', onReset);
+
+function onReset(e){
+  e.preventDefault();
+  productsList.innerHTML = [];
+  productsList.insertAdjacentHTML('afterbegin', markup);
+  Array.from(form.querySelectorAll("input")).forEach(item => (item.checked ? item.checked = false : null));
+}
