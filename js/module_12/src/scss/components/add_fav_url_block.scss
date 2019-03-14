@@ -1,0 +1,85 @@
+.fav-links__options,.fav-links__block{
+    margin: 0 auto;
+    width: 800px;
+    background-color: $first-color;
+    border-radius: 20px;
+    padding: 20px;
+}
+.fav-links__options__input{
+    width: 500px;
+    height: 50px;
+    border-radius: 20px;
+    margin: 10px auto;
+    display: block;
+    font-size: 30px;
+    color: $font-color;
+    padding: 5px;
+}
+.fav-links__options__btn,.fav-links__block__list__item__btn{
+    background-color: $second-color;
+    color: #fff;
+    margin: 10px auto;
+    width: 150px;
+    height: 50px;
+    border-radius: 20px;
+    display: block;
+    font-weight: bold;
+    font-size: 30px;
+}
+.fav-links__block{
+    width: 1200px;
+    margin: 20px auto;
+    display: block;
+    background-color: $second-color;
+}
+.fav-links__block__title{
+    display: block;
+    width: 100%;
+    font-size: 50px;
+    text-align: center;
+    color: $font-color;
+    border-bottom: $font-color 3px solid;
+}
+.fav-links__block__list{
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+}
+.fav-links__block__list__item{
+    width: calc(33.3% - 60px);
+    margin: 30px 30px;
+    background-color: $first-color;
+    border-radius: 20px;
+}
+.fav-links__block__list__item__title{
+    text-align: center;
+    font-size: 30px;
+    color: $font-color;
+    background-color: #fff;
+    border-radius: 20px;
+    padding: 10px;
+    border-bottom-left-radius: 0px; 
+}
+.fav-links__block__list__item__img{
+    margin: 10px auto;
+    display: block;
+    width: 90%;
+    padding: 5px;
+}
+.fav-links__block__list__item__descr{
+    font-size: 25px;
+    color: $font-color;
+    padding: 20px;
+}
+.fav-links__block__list__item__link{
+    font-size: 25px;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    border-bottom: #fff 2px solid;
+    width: 70%;
+    display: block;
+    margin: 0 auto;
+}
