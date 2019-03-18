@@ -1,45 +1,86 @@
 'use strict';
+
 import './../scss/index.scss';
-import linkTpl from "../templates/templates.hbs";
-import './../services/api';
-import './../services/add_link';
+import '../services/shortlist';
+import '../services/regtest';
+import './../services/modal';
 
 const addLinkForm = document.querySelector('.js__fav-links-form');
 const addLinkInput = document.querySelector('.js-fav-links-inp');
-const addLinkBtn = document.querySelector('.js-fav-links-btn');
-const favLinksList = document.querySelector('.js-fav-links-list');
+
+const urlExist = `Sorry! But this link is already added to youre\'s shortlist! Please type another link or check list`;
+const urlFail = `Sorry! But you enter an empty link. Please, try again!`
+const notUrl = `Sorry! Link is't valid! We can't add this link to shortlist! Please check link and try again!`
+
+import {updateLocalStorage,getLinks} from '../services/ls';
+import {fetchAPI, addToList} from '../services/shortlist';
+import {testUrl} from '../services/regtest';
+
+import {modal,openModal,closeModal} from '../services/modal';
 
 
 addLinkForm.addEventListener('submit', addLink);
 
 
-function addLink(e){
+lastSession();
+
+function lastSession (){
+    // const value = JSON.parse(localStorage.getItem("links"));
+    getLinks().forEach(el =>{
+        // localStorageArr.push(el);
+        addToList(el);
+    // value.forEach(el =>{
+    // localStorageArr.push(el);
+    // addToList(el);
+});  
+}
+
+function addLink (e){
     e.preventDefault();
     const value = addLinkInput.value;
+    if(value === ''){
+        openModal();
+        showMsg(urlFail);
+        addLinkForm.reset();
+        return
+    }
+    if(!testUrl(value)){
+        openModal();
+        showMsg(notUrl);
+        addLinkForm.reset();
+        return
+    }
+    const hasLink =  getLinks().some(e=>{ 
+         return Object.values(e).includes(value) || (Object.values(e).includes(value + `/`)) 
+    })
+    if (hasLink){
+        openModal();
+        showMsg(urlExist);
+        return
+    }
     fetchAPI(value);
+    
     addLinkForm.reset();
 }
-function addToList(data){
-    const urlData = {
-        title : data.title,
-        descr : data.description,
-        img : data.image,
-        url: data.url
-    }
-    favLinksList.insertAdjacentHTML("afterbegin", linkTpl(urlData));
-    const deleteLinkBtn = document.querySelector('.js-delete-link-btn');
-    deleteLinkBtn.addEventListener('click', removeFromList)
+function showMsg(message){
+    const msg = modal.querySelector('.js-modal-msg');
+    msg.textContent = message;
 }
-function removeFromList(e){
-    e.preventDefault();
-    e.target.removeEventListener('click', removeFromList)
-    this.parentNode.remove(".js-fav-link-item");
-}
-function fetchAPI (url){
-    const keyAPI = '5c8a795154b726205b11554ae09686d1186cd15744a02';
-    return fetch(`http://api.linkpreview.net/?key=${keyAPI}&q=${url}`).then(response=>{
-        if (response.ok) return response.json();
-        throw new Error(`Error while fetching: ${response.statusText}`);
-}).then(data=> {addToList(data)}
-).catch(err=>console.log(err));
-}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

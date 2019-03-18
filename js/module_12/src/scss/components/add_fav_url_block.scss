@@ -18,13 +18,17 @@
 .fav-links__options__btn,.fav-links__block__list__item__btn{
     background-color: $second-color;
     color: #fff;
-    margin: 10px auto;
+    margin: 20px auto;
     width: 150px;
     height: 50px;
     border-radius: 20px;
     display: block;
     font-weight: bold;
     font-size: 30px;
+    cursor: pointer;
+}
+.fav-links__block__list__item__btn:hover{
+    color: #ff1111;
 }
 .fav-links__block{
     width: 1200px;
@@ -80,9 +84,13 @@
     text-align: center;
     border-top: #fff 2px solid;
     border-bottom: #fff 2px solid;
-    width: 70%;
+    width: 75%;
     display: block;
     margin: 0 auto;
     height: auto;
     word-wrap: break-word;
+    text-decoration: none;
+}
+.fav-links__block__list__item__link:hover{
+    transform: scale(1.15);
 }
