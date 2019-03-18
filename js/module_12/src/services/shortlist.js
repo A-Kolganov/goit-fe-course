@@ -6,7 +6,7 @@ import * as LS from './ls';
 
 function fetchAPI (url){
     const keyAPI = '5c8a795154b726205b11554ae09686d1186cd15744a02';
-    return fetch(`http://api.linkpreview.net/?key=${keyAPI}&q=${url}`).then(response=>{
+    return fetch(`https://api.linkpreview.net/?key=${keyAPI}&q=${url}`).then(response=>{
         if (response.ok) return response.json();
         throw new Error(`Error while fetching: ${response.statusText}`);
 })
